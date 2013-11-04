@@ -28,7 +28,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-          <a class="navbar-brand" href="index.html">Home</a>
+          <a class="navbar-brand" href="index.html">NC State Aerial Robotics Club</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
