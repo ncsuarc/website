@@ -130,8 +130,6 @@
           <ul class="list-unstyled list-inline list-social-icons">
             <li class="tooltip-social facebook-link"><a href="http://www.facebook.com/ncsuarc" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
             <li class="tooltip-social linkedin-link"><a href="http://www.linkedin.com/groups/NC-State-University-Aerial-Robotics-4820006" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a></li>
-            <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="icon-twitter-sign icon-2x"></i></a></li>
-            <li class="tooltip-social google-plus-link"><a href="#google-plus-page" data-toggle="tooltip" data-placement="top" title="Google+"><i class="icon-google-plus-sign icon-2x"></i></a></li>
             <li class="tooltip-social github-link"><a href="https://github.com/ncsuarc" data-toggle="tooltip" data-placement="top" title="GitHub"><i class="icon-github-sign icon-2x"></i></a></li>
           </ul>
         </div>
