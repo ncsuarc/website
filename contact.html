@@ -37,7 +37,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
             <li><a href="system.html">System Overview</a></li>
-            <li class="active"><a href="contact.php">Contact</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Member Pages <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -76,38 +76,6 @@
         <div class="col-sm-8">
           <h3>Let's Get In Touch!</h3>
           <p>If you're a student interested in joining our club, a company looking to sponsor us, or you just want to get more information about what we're doing, get in touch with us.</p>
-			<?php  
-
-                // check for a successful form post  
-                if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";  
-          
-                // check for a form error  
-                elseif (isset($_GET['e'])) echo "<div class=\"alert alert-danger\">".$_GET['e']."</div>";  
-
-			?>
-            <form role="form" method="POST" action="contact-form-submission.php">
-              <div class="form-group col-lg-4">
-                <label for="input1">Name</label>
-                <input type="text" name="contact_name" class="form-control" id="input1">
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="input2">Email Address</label>
-                <input type="email" name="contact_email" class="form-control" id="input2">
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="input3">Phone Number</label>
-                <input type="phone" name="contact_phone" class="form-control" id="input3">
-              </div>
-              <div class="clearfix"></div>
-              <div class="form-group col-lg-12">
-                <label for="input4">Message</label>
-                <textarea name="contact_message" class="form-control" rows="6" id="input4"></textarea>
-              </div>
-              <div class="form-group col-lg-12">
-                <input type="hidden" name="save" value="contact">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </form>
         </div>
 
         <div class="col-sm-4">
