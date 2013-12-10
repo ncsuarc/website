@@ -124,9 +124,8 @@
             MAE Box 7910<br />
             Raleigh, NC 27606<br />
           </p>
-          <!--<p><i class="icon-phone"></i> <abbr title="Phone">P</abbr>: (555) 984-3600</p>--!>
           <p><i class="icon-envelope-alt"></i> <abbr title="Email">E</abbr>: <a href="mailto:arc.ncsu@gmail.com">arc.ncsu@gmail.com</a></p>
-          <p><i class="icon-time"></i> <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 6:00 PM</p>
+          <p><i class="icon-time"></i> <abbr title="Hours">H</abbr>: Stop by our lab anytime, Monday - Friday!</p>
           <ul class="list-unstyled list-inline list-social-icons">
             <li class="tooltip-social facebook-link"><a href="http://www.facebook.com/ncsuarc" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
             <li class="tooltip-social linkedin-link"><a href="http://www.linkedin.com/groups/NC-State-University-Aerial-Robotics-4820006" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a></li>
