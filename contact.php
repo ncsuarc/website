@@ -124,7 +124,7 @@
             MAE Box 7910<br />
             Raleigh, NC 27606<br />
           </p>
-          <p><i class="icon-envelope-alt"></i> <abbr title="Email">E</abbr>: <a href="mailto:arc.ncsu@gmail.com">arc.ncsu@gmail.com</a></p>
+          <p><i class="icon-envelope-alt"></i> <abbr title="Email">E</abbr>: <a href="mailto:contact@aerialroboticsclub.com">contact@aerialroboticsclub.com</a></p>
           <p><i class="icon-time"></i> <abbr title="Hours">H</abbr>: Stop by our lab anytime, Monday - Friday!</p>
           <ul class="list-unstyled list-inline list-social-icons">
             <li class="tooltip-social facebook-link"><a href="http://www.facebook.com/ncsuarc" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
