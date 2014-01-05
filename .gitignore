@@ -1,1 +1,5 @@
 *.swp
+.htaccess
+tracker
+wiki
+twiki
