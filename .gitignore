@@ -1,5 +1,2 @@
-*.swp
-.htaccess
-tracker
-wiki
-twiki
+# Generated webpage
+public/

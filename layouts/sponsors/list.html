@@ -1,0 +1,31 @@
+{{ define "title" }}ARC Sponsors{{ end }}
+{{ define "main" }}
+  {{ partial "title.html" . }}
+
+  {{ .Content }}
+
+  <div class="container">
+    {{ range .Pages.GroupByParam "Level" }}
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="page-header">{{ .Key }}</h2>
+          <ul id="sponsor-tab" class="nav nav-tabs">
+            {{ range $idx, $val := .Pages.ByTitle }}
+              <li class="{{if eq $idx 0}}active{{end}}">
+                <a href="#{{ .File.UniqueID }}" data-toggle="tab">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+          <div id="sponsor-tabs" class="tab-content">
+            {{ range $idx, $val := .Pages.ByTitle }}
+              <div class="tab-pane fade in {{if eq $idx 0}}active{{end}}" id="{{ .File.UniqueID }}">
+                <img class="pull-left logo" src="/sponsors/logos/{{ .Params.Logo }}"></img>
+                {{ .Content }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

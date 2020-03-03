@@ -1,0 +1,5 @@
+{{ define "title" }}{{ .Page.Title }} System Overview{{ end }}
+{{ define "main" }}
+  {{ partial "title" . }}
+  {{ .Content }}
+{{ end }}

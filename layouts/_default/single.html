@@ -1,0 +1,5 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+{{ define "main" }}
+  {{ partial "title.html" . }}
+  {{ .Content }}
+{{ end }}

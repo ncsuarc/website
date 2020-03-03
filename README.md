@@ -1,23 +1,30 @@
-# ARC's Public Website
+# website
 
-The public-facing part of our website and what you first see at
-<https://aerialroboticsclub.com/>!
+The website for ARC's main website.
 
-This is primarily a marketing/publicity website, where we show off our systems,
-our sponsors, and our team. However, it should also navigate authenticated
-users to our issue tracker and git web server.
+This website is statically built using the [Hugo] framework. To develop the
+website, download Hugo using your normal package manager (or docker) and run
+the following and open http://localhost:1313/ in your browser.
 
-## Why [Docker](https://www.docker.com/)?
+```sh
+hugo server
+```
 
-We (will) deploy our webserver in a docker container, so it is easiest for this
-project to provide it's own docker container containing a pre-built version of
-the website.
+[Hugo]: https://gohugo.io/
 
-Docker also allows for cross-platform development and deployment of the
-website, making developing a little easier.
+## Project Layout
 
-Since the website is literally just static HTML, CSS, and JS right now, none of
-these considerations are particularly important (except for this project
-providing a "builder" image for the containers downstream). However, having a
-docker image for this project allows us to freely modify the process for
-building the static website.
+This project is laid out using the standard Hugo project format.
+
+```nohighlight
+website
+|-- config.toml - Site-wide configuration and menus.
+|-- content - Main text and content on the web page.
+|-- layouts - How the text should be position. Home page is in here too.
+\-- static - JavaScript, CSS, images, and other miscellaneous content.
+```
+
+We list our sponsors and officers as entries/posts within their page as a
+section to reduce repetition. Since we don't want sponsors or officers to have
+their own page, we use a partial for our 404 page and make the single page for
+sponsors or officers look like the 404 page.

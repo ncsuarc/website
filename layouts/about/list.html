@@ -1,0 +1,36 @@
+{{ define "title" }}About ARC{{ end }}
+{{ define "main" }}
+  {{ partial "title.html" . }}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="img-responsive" src="/images/clubonrunway.jpg">
+      </div>
+      <div class="col-md-6">
+        {{ .Content }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="page-header">Our Officers</h2>
+      </div>
+      {{ range .Pages.ByParam "order" }}
+        <div class="col-sm-4">
+          <img class="img-responsive" src="images/{{ .Params.image }}">
+          <h3>{{ .Params.name }} <small>{{ .Params.role }}</small></h3>
+          {{ .Content }}
+          {{ if .Params.social }}
+            <ul class="list-unstyled list-inline list-social-icons">
+              {{ range $key, $val := .Params.social }}
+                <li class="tooltip-social {{ $key }}-link">
+                  <a href="{{ $val }}"><i class="icon-{{ $key }}-sign icon-2x"></i></a>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
