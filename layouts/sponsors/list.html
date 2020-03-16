@@ -5,26 +5,26 @@
   {{ .Content }}
 
   <div class="container">
-    {{ range .Pages.GroupByParam "Level" }}
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 class="page-header">{{ .Key }}</h2>
-          <ul id="sponsor-tab" class="nav nav-tabs">
-            {{ range $idx, $val := .Pages.ByTitle }}
-              <li class="{{if eq $idx 0}}active{{end}}">
-                <a href="#{{ .File.UniqueID }}" data-toggle="tab">{{ .Title }}</a>
-              </li>
-            {{ end }}
-          </ul>
-          <div id="sponsor-tabs" class="tab-content">
-            {{ range $idx, $val := .Pages.ByTitle }}
-              <div class="tab-pane fade in {{if eq $idx 0}}active{{end}}" id="{{ .File.UniqueID }}">
-                <img class="pull-left logo" src="/sponsors/logos/{{ .Params.Logo }}"></img>
-                {{ .Content }}
+    {{/* Put higher levels first */}}
+    {{ range (.Pages.GroupByParam "Level").Reverse }}
+      {{ with index $.Site.Params.sponsorship.levels .Key }}
+        <h2 class="page-header">{{ . }}</h2>
+      {{ else }}
+        {{ errorf "%d is not a known sponsorship level see [params.sponsorship.level] in `config.toml`." .Key }}
+      {{ end }}
+      <div class="row masonry-xs-6 masonry-sm-4 masonry-md-3">
+        {{ range .Pages.ByTitle }}
+          <div class="masonry-item">
+            <a href="{{ .Params.link }}">
+              <div class="thumbnail">
+                <img src="logos/{{ .Params.logo }}" alt="{{ .Title }} Logo" class="img-responsive center-block">
+                <div class="caption">
+                  <h4 align="center">{{ .Title }}</h4>
+                </div>
               </div>
-            {{ end }}
+            </a>
           </div>
-        </div>
+        {{ end }}
       </div>
     {{ end }}
   </div>

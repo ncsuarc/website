@@ -52,3 +52,7 @@ title = "Aerial Robotics Club at NC State"
     parent = "member"
     name = "Documentation"
     url = "/documentation"
+
+[params.sponsorship.levels]
+10 = "Supporters"
+20 = "Sponsors"
