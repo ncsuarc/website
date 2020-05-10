@@ -39,19 +39,19 @@ title = "Aerial Robotics Club at NC State"
 [[menu.main]]
     parent = "member"
     name = "Wiki"
-    url = "/wiki"
+    url = "/wiki/"
 [[menu.main]]
     parent = "member"
     name = "Internal Progress Tracker"
-    url = "/tracker"
+    url = "/tracker/"
 [[menu.main]]
     parent = "member"
     name = "Gitea Web Server"
-    url = "/gitea"
+    url = "https://gitea.aerialroboticsclub.com"
 [[menu.main]]
     parent = "member"
     name = "Documentation"
-    url = "/documentation"
+    url = "/documentation/"
 
 [params.sponsorship.levels]
 10 = "Supporters"
