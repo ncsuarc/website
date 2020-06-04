@@ -1,37 +1,38 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                                  data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/index.html">{{ .Site.Title }}</a>
-    </div>
+    <a class="navbar-brand navbar-inline" href="/">
+      <img src="/img/logo.svg" height="45">
+      {{/* We only show the title on sm+ devices */}}
+      <span class="d-none d-sm-inline-block">{{ .Site.Title }}</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {{/* ml-auto adds a left margin, meaning the items are right aligned */}}
+      <ul class="navbar-nav ml-auto">
         {{ $current_page := . }}
         {{ range .Site.Menus.main }}
           {{ if .HasChildren }}
-            <li class="dropdown {{if in $current_page.RelPermalink .URL}}active{{end}}">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                {{ .Name }} <b class="caret"></b>
+            <li class="nav-item dropdown {{if in $current_page.RelPermalink .URL}}active{{end}}">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                {{ .Name }}<b class="caret"></b>
               </a>
-              <ul class="dropdown-menu">
+              <div class="dropdown-menu {{if in $current_page.RelPermalink .URL}}active{{end}}" aria-labelledby="navbarDropdown">
                 {{ range .Children }}
-                  <li class="{{if in $current_page.RelPermalink .URL}}active{{end}}">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                  </li>
+                  <a class="dropdown-item" href="{{ .URL }}">
+                    {{ .Name }}
+                    <span class="sr-only"> (current)</span>
+                  </a>
                 {{ end }}
-              </ul>
+              </div>
             </li>
           {{ else }}
-            <li class="{{if in $current_page.RelPermalink .URL}}active{{end}}">
-              <a href="{{ .URL }}">{{ .Name }}</a>
+            <li class="nav-item {{if in $current_page.RelPermalink .URL}}active{{end}}">
+              <a class="nav-link" href="{{ .URL }}">
+                {{ .Name }}<span class="sr-only"> (current)</span>
+              </a>
             </li>
           {{ end }}
         {{ end }}

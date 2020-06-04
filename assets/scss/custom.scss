@@ -1,0 +1,34 @@
+// Our variable overrides
+$theme-colors: (
+  // TODO: Override more colors
+  "primary": #c90000,
+);
+
+// Bootstrap
+@import "bootstrap/bootstrap";
+
+// Our custom (s)css
+
+// Homepage hero
+.hero {
+  // TODO: Don't hardcode this, use site.params
+  display: flex;
+  // TODO: Make it so this accounts for the navbar
+  height: 100vh;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}
+
+.homepage-hero {
+  background-image: url('/images/akela_night.jpg');
+  background-color: theme-color();
+  // filter: blur(2px);
+}
+
+.hero-image {
+  flex-grow: 1;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
