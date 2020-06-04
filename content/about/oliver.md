@@ -5,6 +5,6 @@ image: "oliver.jpg"
 order: 3
 social:
   linkedin: "https://www.linkedin.com/in/hjoliver/"
+description: >
+  Manages relationships with corporate sponsors and prospective new members.
 ---
-
-Manages relationships with corporate sponsors and prospective new members.
