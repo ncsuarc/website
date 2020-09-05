@@ -1,3 +1,22 @@
-{{ define "only_meta" }}
-  {{ partial "404.html" . }}
+{{ define "main" }}
+  <div class="container">
+    <div class="row">
+      {{ range .Pages }}
+        <div class="col-12 col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="{{ .Params.image }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ .Title }}</h5>
+              <div class="card-text">{{ .Summary }}</div>
+              <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
 {{ end }}

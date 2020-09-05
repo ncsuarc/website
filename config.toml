@@ -38,10 +38,6 @@ title = "Aerial Robotics Club"
     url = "nourl"
 [[menu.main]]
     parent = "member"
-    name = "Wiki"
-    url = "/wiki"
-[[menu.main]]
-    parent = "member"
     name = "Internal Progress Tracker"
     url = "/tracker"
 [[menu.main]]
