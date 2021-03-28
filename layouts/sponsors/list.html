@@ -12,18 +12,16 @@
       {{ else }}
         {{ errorf "%d is not a known sponsorship level see [params.sponsorship.level] in `config.toml`." .Key }}
       {{ end }}
-      <div class="row masonry-xs-6 masonry-sm-4 masonry-md-3">
+      <div class="card-columns">
         {{ range .Pages.ByTitle }}
-          <div class="masonry-item">
-            <a href="{{ .Params.link }}">
-              <div class="thumbnail">
-                <img src="logos/{{ .Params.logo }}" alt="{{ .Title }} Logo" class="img-responsive center-block">
-                <div class="caption">
-                  <h4 align="center">{{ .Title }}</h4>
-                </div>
+          <a href="{{ .Params.link }}">
+            <div class="card">
+              <img class="card-img-top" src="logos/{{ .Params.logo }}" alt="{{ .Title }}">
+              <div class="card-body text-center text-dark">
+                <h5 class="card-title">{{ .Title }}</h5>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         {{ end }}
       </div>
     {{ end }}
