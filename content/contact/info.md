@@ -1,5 +1,5 @@
 ---
-title: "Aerial Robotics Club at NC State
+title: "Aerial Robotics Club at NC State"
 ---
 
 #### Lab
