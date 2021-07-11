@@ -1,49 +1,50 @@
 {{ define "title" }}Contact{{ end }}
 {{ define "main" }}
-{{ partial "title.html" . }}
-<div class="container">
+  {{ partial "title.html" . }}
+  <div class="container">
 
-  <div class="row">
-    <div class="col-lg-12">
-      <!--
-          Embedded Google Map using an iframe - to select your location find it
-          on Google maps and paste the link as the iframe src. If you want to use
-          the Google Maps API instead then have at it!
-        -->
-      <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={{ .Params.google_maps }}></iframe>
-    </div>
-  </div><!-- /.row -->
+    <div class="row">
+      <div class="col-lg-12">
+        <!--
+            Embedded Google Map using an iframe - to select your location find it
+            on Google maps and paste the link as the iframe src. If you want to use
+            the Google Maps API instead then have at it!
+          -->
+        <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={{ .Params.google_maps }}></iframe>
+      </div>
+    </div><!-- /.row -->
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-sm-8">
-      {{ .Content }}
-    </div>
+      <div class="col-sm-8">
+        {{ .Content }}
+      </div>
 
-    {{ where .Pages "Section" "info" }}
-    <div class="col-sm-4">
-      <h3>{{ .Title }}</h3>
-      {{ .Content }}
-      <p>
-        <i class="icon-envelope-alt"></i>
-        <abbr title="Email">E</abbr>:
-        <a href="mailto:contact@aerialroboticsclub.com">contact@aerialroboticsclub.com</a>
-      </p>
-      <p>
-        <i class="icon-time"></i> <abbr title="Hours">H</abbr>: Stop by our lab
-        anytime, Monday - Friday!
-      </p>
-      <ul class="list-unstyled list-inline list-social-icons">
-        <li class="tooltip-social facebook-link"><a href="http://www.facebook.com/ncsuarc" data-toggle="tooltip"
-            data-placement="top" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
-        <li class="tooltip-social linkedin-link"><a href="https://www.linkedin.com/company/arc-ncsu/about/"
-            data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
-        </li>
-        <li class="tooltip-social github-link"><a href="https://github.com/ncsuarc" data-toggle="tooltip" data-placement="top"
-            title="GitHub"><i class="icon-github-sign icon-2x"></i></a></li>
-      </ul>
-    </div>
-    {{ end }}
-  </div><!-- /.row -->
+      {{ range where .Pages "Title" "Aerial Robotics Club at NC State" }}
+      <div class="col-sm-4">
+        <h3>{{ .Title }}</h3>
+        {{ .Content }}
+        <p>
+          <i class="icon-envelope-alt"></i>
+          <abbr title="Email">E</abbr>:
+          <a href="mailto:contact@aerialroboticsclub.com">contact@aerialroboticsclub.com</a>
+        </p>
+        <p>
+          <i class="icon-time"></i> <abbr title="Hours">H</abbr>: Stop by our lab
+          anytime, Monday - Friday!
+        </p>
+        <ul class="list-unstyled list-inline list-social-icons">
+          <li class="tooltip-social facebook-link"><a href="http://www.facebook.com/ncsuarc" data-toggle="tooltip"
+              data-placement="top" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
+          <li class="tooltip-social linkedin-link"><a href="https://www.linkedin.com/company/arc-ncsu/about/"
+              data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
+          </li>
+          <li class="tooltip-social github-link"><a href="https://github.com/ncsuarc" data-toggle="tooltip" data-placement="top"
+              title="GitHub"><i class="icon-github-sign icon-2x"></i></a></li>
+        </ul>
+      </div>
+      {{ end }}
+    </div><!-- /.row -->
 
-</div><!-- /.container -->
+  </div><!-- /.container -->
+{{ end }}
