@@ -1,3 +1,49 @@
 {{ define "main" }}
-{{ .Content }}
+  <div class="hero homepage-hero text-white">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg my-1">
+          <h1 class="display-4">
+            The <span class="font-weight-bold">Aerial Robotics Club</span> at NC
+            State
+          </h1>
+          <p class="lead">
+            A multi-disciplinary team of NC State students that specializes in
+            designing and building autonomous search and rescue aerial systems.
+          </p>
+          {{ .Content }}
+        </div>
+        <div class="col-lg-6 my-1">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/xj1d0QHZ9s0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="timeline">
+      {{ range where .Pages "Section" "timeline" }}
+        {{ if .Params.inverted | eq true }}
+          <li>
+            <div class="timeline-badge"></div>
+            <div class="timeline-panel">
+              <h4 class="timeline-title">{{ .Title }}</h4>
+              {{ .Content }}
+            </div>
+          </li>
+        {{ else }}
+          <li class="timeline-inverted">
+            <div class="timeline-badge"></div>
+            <div class="timeline-panel">
+              <h4 class="timeline-title">{{ .Title }}</h4>
+              {{ .Content }}
+            </div>
+          </li>
+        {{ end }}
+      {{end}}
+    </ul>
+  </div>
 {{ end }}

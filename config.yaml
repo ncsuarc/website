@@ -1,0 +1,53 @@
+baseURL: "https://aerialroboticsclub.com/"
+languageCode: "en-us"
+title: "Aerial Robotics Club"
+
+menu:
+  main:
+  - name: "About"
+    url: "/about/"
+    weight: 1
+
+  - name: "Contact"
+    url: "/contact/"
+    weight: 1
+
+  - name: "Sponsors"
+    url: "/sponsors/"
+    weight: 1
+
+  - identifier: "systems"
+    name: "Systems"
+    url: "/systems/"
+    weight: 1
+
+  - parent: "systems"
+    name: "Fenrir"
+    url: "/systems/fenrir/"
+
+  - parent: "systems"
+    name: "Akela"
+    url: "/systems/akela/"
+
+  - identifier: "member"
+    name: "Member Pages"
+    weight: 2
+    url: "nourl"
+
+  - parent: "member"
+    name: "Internal Progress Tracker"
+    url: "/tracker"
+
+  - parent: "member"
+    name: "Gitea Web Server"
+    url: "/gitea"
+
+  - parent: "member"
+    name: "Documentation"
+    url: "/documentation"
+
+params:
+  sponsorship:
+    levels:
+      10: "Supporters"
+      20: "Sponsors"
