@@ -42,24 +42,28 @@
   <div class="container">
     <hr/>
     <ul class="timeline">
-      {{ range where .Site.Pages "Section" "homepage" }}
-        {{ if .Params.inverted | eq true }}
-          <li>
-            <div class="timeline-badge"></div>
-            <div class="timeline-panel">
-              <h4 class="timeline-title">{{ .Title }}</h4>
-              {{ .Content }}
-            </div>
-          </li>
-        {{ else if (.Params.inverted | eq false)}}
-          <li class="timeline-inverted">
-            <div class="timeline-badge"></div>
-            <div class="timeline-panel">
-              <h4 class="timeline-title">{{ .Title }}</h4>
-              {{ .Content }}
-            </div>
-          </li>
+      {{ $counter := 0 }}
+      {{ range (where .Site.Pages "Section" "homepage").Reverse }}
+        {{ if isset .Params "timeline" }}
+          {{ if eq (mod $counter 2) 0 }}
+            <li>
+              <div class="timeline-badge"></div>
+              <div class="timeline-panel">
+                <h4 class="timeline-title">{{ .Title }}</h4>
+                {{ .Content }}
+              </div>
+            </li>
+          {{ else if eq (mod $counter 2) 1 }}
+            <li class="timeline-inverted">
+              <div class="timeline-badge"></div>
+              <div class="timeline-panel">
+                <h4 class="timeline-title">{{ .Title }}</h4>
+                {{ .Content }}
+              </div>
+            </li>
+          {{ end }}
         {{ end }}
+      {{ $counter = add $counter 1 }}
       {{end}}
     </ul>
   </div>

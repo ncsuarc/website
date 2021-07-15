@@ -11,6 +11,16 @@ $primary: #c90000;
   border: none;
 }
 
+// Used to rotate arrow when expanding collapsible menu
+.card-header.collapsed .fa-chevron-up {
+  transform: rotate(180deg);
+}
+
+// Applies a transition to arrow rotations
+.fa-chevron-up {
+    transition: all 0.3s ease;
+ }
+
 // Homepage hero
 .hero {
   // TODO: Don't hardcode this, use site.params
@@ -34,6 +44,7 @@ $primary: #c90000;
   padding: 0;
 }
 
+// Used to make images fit in page
 .img-fit {
   height: auto;
   width: 100%;

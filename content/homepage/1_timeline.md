@@ -1,8 +1,9 @@
 ---
-title: "AUVSI SUAS 2017 - Just Joe Sportsmanship Award"
-inverted: true
+title: "3rd Place - AUVSI SUAS 2015"
+timeline: true
 ---
 
 * Autonomous takeoff, waypoint navigation, search, dynamic retasking, and landing
-* Actionable, and remote intelligence objectives met
-* Competed against 54 teams from around the world, including the US, Canada, India, Israel, Germany, and Turkey
+* Identified emergent target and performed successful air drop
+* First place Flight Readiness Review
+* Competed against 39 teams from around the world, including the US, Canada, India, Israel, Germany, and Turkey
