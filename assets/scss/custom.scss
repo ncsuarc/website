@@ -7,6 +7,10 @@ $primary: #c90000;
 
 // Our custom (s)css
 
+.card {
+  border: none;
+}
+
 // Homepage hero
 .hero {
   // TODO: Don't hardcode this, use site.params

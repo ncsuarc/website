@@ -35,16 +35,18 @@
       {{ else }}
         {{ errorf "%d is not a known sponsorship level see [params.sponsorship.level] in `config.toml`." .Key }}
       {{ end }}
-      <div class="card-columns">
+      <div class="row align-items-center">
         {{ range .Pages.ByTitle }}
-          <a href="{{ .Params.link }}">
-            <div class="card">
-              <img class="card-img-top" src="logos/{{ .Params.logo }}" alt="{{ .Title }}">
-              <div class="card-body text-center text-dark">
-                <h5 class="card-title">{{ .Title }}</h5>
-              </div>
-            </div>
-          </a>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+              <a href="{{ .Params.link }}">
+                <div class="card h-100">
+                  <img class="card-img-top" src="logos/{{ .Params.logo }}" alt="{{ .Title }}">
+                  <div class="card-body text-center text-dark">
+                    <h5 class="card-title">{{ .Title }}</h5>
+                  </div>
+                </div>
+              </a>
+          </div>
         {{ end }}
       </div>
     {{ end }}
