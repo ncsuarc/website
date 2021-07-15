@@ -3,11 +3,14 @@
   {{ partial "title.html" . }}
 
   <div class="container">
+    <hr/>
     <div class="row">
       <div class="col-lg-12">
         <img class="img-responsive" src="{{ .Params.banner_img }}">
       </div><!-- ./col -->
     </div><!-- /.row -->
+
+    <hr/>
     <div class="row">
       <div class="col-md-8">
         {{ .Content }}
@@ -27,6 +30,7 @@
     {{/* Put higher levels first */}}
     {{ range (.Pages.GroupByParam "Level").Reverse }}
       {{ with index $.Site.Params.sponsorship.levels .Key }}
+        <hr/>
         <h2 class="page-header">{{ . }}</h2>
       {{ else }}
         {{ errorf "%d is not a known sponsorship level see [params.sponsorship.level] in `config.toml`." .Key }}
