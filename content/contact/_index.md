@@ -1,7 +1,6 @@
 ---
 title: "Contact"
 subtitle: "We'd Love to Hear From You!"
-google_maps: "https://www.google.com/maps?sll=35.77105309999947,-78.67345216639923&amp;sspn=0.007129072974565932,0.01714419497581687&amp;t=m&amp;q=Aerial+Robotics+Club&amp;ie=UTF8&amp;hq=Aerial+Robotics+Club&amp;hnear=&amp;ll=35.771726,-78.674051&amp;spn=0.001741,0.004292&amp;z=18&amp;iwloc=A&amp;output=embed"
 ---
 
 ### Let's Get In Touch!

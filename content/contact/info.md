@@ -2,16 +2,15 @@
 title: "Aerial Robotics Club at NC State"
 ---
 
+---
+
 #### Lab
 
 Room 2003\
 Engineering Building III\
 North Carolina State University
 
-#### Meetings
-
-Wednesdays, 6:30PM\
-Room 2003
+---
 
 #### Mailing Address
 

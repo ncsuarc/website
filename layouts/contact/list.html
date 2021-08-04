@@ -1,49 +1,49 @@
 {{ define "title" }}Contact{{ end }}
 {{ define "main" }}
-  {{ partial "title.html" . }}
-  <div class="container">
-    <hr/>
-    <div class="row">
-      <div class="col-lg-12">
-        <!--
+{{ partial "title.html" . }}
+<div class="container">
+  <hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <!--
             Embedded Google Map using an iframe - to select your location find it
             on Google maps and paste the link as the iframe src. If you want to use
             the Google Maps API instead then have at it!
           -->
-        <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={{ .Params.google_maps }}></iframe>
+      <div class="embed-responsive embed-responsive-21by9">
+        <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://www.google.com/maps?sll=35.77105309999947,-78.67345216639923&amp;sspn=0.007129072974565932,0.01714419497581687&amp;t=m&amp;q=Aerial+Robotics+Club&amp;ie=UTF8&amp;hq=Aerial+Robotics+Club&amp;hnear=&amp;ll=35.771726,-78.674051&amp;spn=0.001741,0.004292&amp;z=18&amp;iwloc=A&amp;output=embed"></iframe>
       </div>
-    </div><!-- /.row -->
+    </div>
+  </div><!-- /.row -->
 
-    <hr/>
-    <div class="row">
-      <div class="col-sm-8">
-        {{ .Content }}
+  <hr />
+  <div class="row">
+    <div class="col-sm-8">
+      {{ .Content }}
+      <hr />
+      <div class="embed-responsive embed-responsive-4by3">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YWVyaWFscm9ib3RpY3NAbmNzdS5lZHU&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043"
+          style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
+    </div>
 
-      {{ range where .Pages "Title" "Aerial Robotics Club at NC State" }}
-      <div class="col-sm-4">
-        <h3>{{ .Title }}</h3>
-        {{ .Content }}
-        <p>
-          <i class="icon-envelope-alt"></i>
-          <abbr title="Email">E</abbr>:
-          <a href="mailto:contact@aerialroboticsclub.com">contact@aerialroboticsclub.com</a>
-        </p>
-        <p>
-          <i class="icon-time"></i> <abbr title="Hours">H</abbr>: Stop by our lab
-          anytime, Monday - Friday!
-        </p>
-        <ul class="list-unstyled list-inline list-social-icons">
-          <li class="tooltip-social facebook-link"><a href="http://www.facebook.com/ncsuarc" data-toggle="tooltip"
-              data-placement="top" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
-          <li class="tooltip-social linkedin-link"><a href="https://www.linkedin.com/company/arc-ncsu/about/"
-              data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
-          </li>
-          <li class="tooltip-social github-link"><a href="https://github.com/ncsuarc" data-toggle="tooltip" data-placement="top"
-              title="GitHub"><i class="icon-github-sign icon-2x"></i></a></li>
-        </ul>
-      </div>
-      {{ end }}
-    </div><!-- /.row -->
-  </div><!-- /.container -->
+    {{ range where .Pages "Title" "Aerial Robotics Club at NC State" }}
+    <div class="col-sm-4">
+      <h3>{{ .Title }}</h3>
+      {{ .Content }}
+      <ul class="list-unstyled list-inline list-social-icons">
+        <li class="tooltip-social facebook-link"><a href="" data-toggle="tooltip"
+            data-placement="top" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
+        <li class="tooltip-social linkedin-link"><a href=""
+            data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
+        </li>
+        <li class="tooltip-social github-link"><a href="" data-toggle="tooltip"
+            data-placement="top" title="GitHub"><i class="icon-github-sign icon-2x"></i></a></li>
+      </ul>
+    </div>
+    {{ end }}
+  </div><!-- /.row -->
+</div><!-- /.container -->
 {{ end }}
