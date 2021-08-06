@@ -10,6 +10,12 @@ the following and open http://localhost:1313/ in your browser.
 hugo server
 ```
 
+Alternatively, a Dockerfile is provided so the following could be used instead.
+
+```sh
+docker build -t website . && docker run --name website --network=host website
+```
+
 [Hugo]: https://gohugo.io/
 
 ## Project Layout
@@ -18,7 +24,7 @@ This project is laid out using the standard Hugo project format.
 
 ```nohighlight
 website
-|-- config.toml - Site-wide configuration and menus.
+|-- config.yaml - Site-wide configuration and menus.
 |-- content - Main text and content on the web page.
 |-- layouts - How the text should be position. Home page is in here too.
 \-- static - JavaScript, CSS, images, and other miscellaneous content.

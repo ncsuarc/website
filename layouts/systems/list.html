@@ -1,3 +1,45 @@
-{{ define "only_meta" }}
-  {{ partial "404.html" . }}
+{{ define "main" }}
+  {{ partial "title.html" . }}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <img class="img-responsive img-fit" src="{{ .Params.image }}">
+      </div>
+    </div>
+
+    <hr/>
+    <div class="row">
+      <div class="col-lg-12">
+        {{ .Content }}
+      </div>
+    </div>
+  </div><!-- ./container -->
+
+  <div class="container" id="accordion">
+    <hr/>
+    {{ range .Pages }}
+    {{ $id := substr (md5 .Title) 0 16}}
+      <div class="card">
+        <div class="card-header collapsed" id="heading{{ $id }}" data-toggle="collapse" data-target="#collapse{{ $id }}" aria-expanded="false" aria-controls="collapse{{ $id }}">
+          <p class="lead">
+            <strong>
+              {{ .Title }} <i class="fas fa-chevron-up"></i>
+            </strong>
+          </p>
+        </div><!-- ./card-header -->
+        <div class="collapse" id="collapse{{ $id }}" aria-labelledby="heading{{ $id }}" data-parent="#accordion">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                {{ .Content }}
+              </div><!-- ./col -->
+              <div class="col-sm-6 align-self-center">
+                <img class="img-responsive img-fit" src="{{ .Params.image }}">
+              </div><!-- ./col -->
+            </div><!-- ./row -->
+          </div><!-- ./card-body -->
+        </div><!-- ./collapse -->
+      </div><!-- ./card -->
+    {{ end }}
+  </div><!-- ./container -->
 {{ end }}
