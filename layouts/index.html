@@ -1,3 +1,86 @@
 {{ define "main" }}
-{{ .Content }}
+<div class="hero homepage-hero text-white">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg my-1">
+        <h1 class="display-4">
+          The <span class="font-weight-bold">{{ .Title }}</span> at NC
+          State
+        </h1>
+        <p class="lead">
+          {{ .Content }}
+        </p>
+      </div>
+      <div class="col-lg-6 my-1">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="{{ .Params.video_link }}"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <hr />
+  <div class="row">
+    {{ range (where .Site.Pages "Section" "homepage").ByParam "order" }}
+    {{ if isset .Params "order" }}
+    <div class="col-sm-4">
+      <h4>
+        {{ .Title }}
+      </h4>
+      {{ .Content }}
+    </div><!-- ./col -->
+    {{ end }}
+    {{ end }}
+  </div><!-- ./row -->
+  <hr />
+</div><!-- ./container -->
+
+<div class="container">
+  <hr />
+  <div class="row">
+    {{ range (where .Site.Pages "Section" "homepage").Reverse }}
+    {{ if isset .Params "link" }}
+    <div class="col-sm-6 text-center">
+      <h5>
+        {{ .Content }}
+      </h5>
+      <a class="btn btn-primary" href={{ .Params.link }}>{{ .Title }}</a>
+    </div><!-- ./col -->
+    {{ end }}
+    {{ end }}
+  </div><!-- ./row -->
+  <hr />
+</div><!-- ./container -->
+
+<div class="container">
+  <ul class="timeline">
+    {{ $counter := 0 }}
+    {{ range (where .Site.Pages "Section" "homepage").Reverse }}
+    {{ if isset .Params "timeline" }}
+    {{ if eq (mod $counter 2) 0 }}
+    <li>
+      <div class="timeline-badge"></div>
+      <div class="timeline-panel">
+        <h4 class="timeline-title">{{ .Title }}</h4>
+        {{ .Content }}
+      </div>
+    </li>
+    {{ else if eq (mod $counter 2) 1 }}
+    <li class="timeline-inverted">
+      <div class="timeline-badge"></div>
+      <div class="timeline-panel">
+        <h4 class="timeline-title">{{ .Title }}</h4>
+        {{ .Content }}
+      </div>
+    </li>
+    {{ end }}
+    {{ end }}
+    {{ $counter = add $counter 1 }}
+    {{end}}
+  </ul>
+</div>
 {{ end }}
