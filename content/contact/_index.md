@@ -7,14 +7,17 @@ subtitle: "We'd Love to Hear From You!"
 
 If you're a student interested in joining our club, a company looking to sponsor us, or you just want to get more information about what we're doing, there are various ways to get in touch with us.
 
-If you are at NC State, please feel free to stop by our lab, attend a interest meeting, or attend a general meeting. We are in room 2003 in Engineering Building III on NCSU's Centennial Campus.
-
+If you are at NC State, please feel free to stop by our lab, join our mailing list, attend a interest meeting, or attend a general meeting. We are in room 2003 in Engineering Building III on NCSU's Centennial Campus.
 
 If you are not at NC State, or just want to send us a quick question, feel free to send us an email at [contact@aerialroboticsclub.com](mailto:contact@aerialroboticsclub.com).
 
+#### Get Involved
+
+If you are a student wanting to get on our mailing list, please check out our [Get Involved](https://getinvolved.ncsu.edu/organization/arc). NCSU students can login and click join to subscribe to our mailing list.
+
 #### Interest Meetings
 
-Interest meetings are held at the beginning of the school year. For dates and times, check out the  calendar displayed below. If you missed all our interest meetings, feel free to stop by a general meeting and ask questions.
+Interest meetings are held at the beginning of the school year. For dates and times, check out the calendar displayed below. If you missed all our interest meetings, feel free to stop by a general meeting and ask questions.
 
 #### General Meetings
 

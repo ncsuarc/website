@@ -35,16 +35,12 @@ menu:
     url: "nourl"
 
   - parent: "member"
-    name: "Internal Progress Tracker"
-    url: "/tracker"
+    name: "Jira"
+    url: "https://jira.aerialroboticsclub.com"
 
   - parent: "member"
-    name: "Gitea Web Server"
-    url: "/gitea"
-
-  - parent: "member"
-    name: "Documentation"
-    url: "/documentation"
+    name: "Redmine"
+    url: "https://redmine.aerialroboticsclub.com"
 
 params:
   sponsorship:
