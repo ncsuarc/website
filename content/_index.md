@@ -1,6 +1,7 @@
 ---
 title: "Aerial Robotics Club"
-video_link: "https://www.youtube.com/embed/xj1d0QHZ9s0"
+video_link_1: "https://www.youtube.com/watch?v=1H6WhYLbsfg"
+video_link_2: "https://www.youtube.com/watch?v=vBWPO9J48_c"
 ---
 
 
