@@ -1,11 +1,11 @@
 ---
 name: "Grey Files"
-role: "Treasurer, Safety Pilot"
+role: "Vice President, Safety Pilot"
 image: "files.jpg"
-order: 3
+order: 2
 social:
   linkedin: "https://www.linkedin.com/in/michell-files/"
   github: "https://github.com/greyfiles"
 description: >
-  Coordinates club funding and purchasing.
+  Assists with club progress and administration.
 ---
