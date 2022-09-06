@@ -41,6 +41,10 @@ menu:
   - parent: "member"
     name: "Redmine"
     url: "https://redmine.aerialroboticsclub.com"
+  
+  - parent: "member"
+    name: "Confluence"
+    url: "https://confluence.aerialroboticsclub.com"
 
 params:
   sponsorship:
