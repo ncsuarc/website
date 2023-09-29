@@ -1,11 +1,11 @@
 ---
 name: "Grey Files"
-role: "Vice President, Safety Pilot"
+role: "Safety Pilot"
 image: "files.jpg"
-order: 2
+order: 10
 social:
   linkedin: "https://www.linkedin.com/in/michell-files/"
   github: "https://github.com/greyfiles"
 description: >
-  Assists with club progress and administration.
+  Ensures aircraft flies safely
 ---

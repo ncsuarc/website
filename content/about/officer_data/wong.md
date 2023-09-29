@@ -1,12 +1,11 @@
 ---
 name: "Jason Wong"
-role: "Webmaster"
+role: "Software Team Lead"
 image: "wong.jpg"
-order: 5
+order: 4
 social:
   linkedin: "https://www.linkedin.com/in/jasontzekitwong/" 
   github: "https://github.com/jwong91"
 description: >
-  Manages the Aerial Robotics Club website and maintains the
-  on-site server and backup systems.
+  Leads the devolopment of software for the aircraft, as well as other systems the club uses
 ---
