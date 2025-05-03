@@ -2,7 +2,7 @@
 name: "Chris Beyrent"
 role: "Drop Team Lead, Public Relations Lead"
 image: "beyrent.jpg"
-order: 5
+order: 9
 social:
   linkedin: "https://www.linkedin.com/in/chris-beyrent-2b220a265/"
 description: >

@@ -1,10 +1,10 @@
 ---
 name: "Max Shipp"
-role: "Treasurer"
+role: "President, Safety Pilot"
 image: "shipp.jpg"
-order: 5
+order: 0
 social:
   linkedin: "https://www.linkedin.com/in/max-shipp/"
 description: >
-  Manages the team funds, tracking funding from income sources, bookkeeping, and purchasing.
+  Oversees club progress and administration. Also leads development of the club's aircraft. In addition,ensures aircraft flies safely during flight tests and competitions.
 ---

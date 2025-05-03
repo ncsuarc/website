@@ -1,6 +1,6 @@
 ---
 name: "Mac Patterson"
-role: "Vice President, Airframe Team Lead"
+role: "Airframe Team Lead"
 image: "patterson.jpg"
 order: 2
 social:
