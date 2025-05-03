@@ -29,6 +29,10 @@ menu:
     name: "Akela"
     url: "/systems/akela/"
 
+  - parent: "systems"
+    name: "Kavik"
+    url: "/systems/kavik"
+
   - identifier: "member"
     name: "Member Pages"
     weight: 2
