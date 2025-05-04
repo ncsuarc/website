@@ -7,6 +7,7 @@ image: "/images/kavik_wingtip.jpg"
 
 * Built-up construction from laser-cut pl
 * Rail-based payload mounting for easy payload swaps and integration
+<!--
 * Easily breaks down for transportation - fits in 56 in X 24 in X 20 in volume
 
 ### Dimenions
@@ -37,4 +38,4 @@ image: "/images/kavik_wingtip.jpg"
 * Takeoff Distance over a 50ft obstacle: 250 ft
 * Landing Roll:     100 ft
 * Max Rate of Climb: 2000 ft/min
-        
+-->

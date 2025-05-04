@@ -22,16 +22,16 @@ menu:
     weight: 1
 
   - parent: "systems"
+    name: "Kavik"
+    url: "/systems/kavik"
+
+  - parent: "systems"
     name: "Fenrir"
     url: "/systems/fenrir/"
 
   - parent: "systems"
     name: "Akela"
     url: "/systems/akela/"
-
-  - parent: "systems"
-    name: "Kavik"
-    url: "/systems/kavik"
 
   - identifier: "member"
     name: "Member Pages"
