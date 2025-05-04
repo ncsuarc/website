@@ -1,3 +1,4 @@
 #!/bin/bash
-docker build -t website . && docker run --name website --network=host website
+source ./.env
+docker build -t ghcr.io/ncsuarc/website:latest .
 docker push ghcr.io/ncsuarc/website:latest
