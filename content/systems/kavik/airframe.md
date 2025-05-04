@@ -12,30 +12,28 @@ image: "/images/kavik_wingtip.jpg"
 
 ### Dimenions
 
-* Wingspan:     10.1 ft
-* Length:       10 ft
-* Height:       36 in
-* Payload bay:  44 in L x 9 in W x 9 in H 
+* Wingspan:     9 ft
+* Length:       10 ft // TODO
+* Height:       8.5 in
+* Payload bay:  8.5 in L x 7.57 in W x 5 in H 
         
 ### Weights
 
-* Empty Weight:       19 lbs
-* Max Gross Weight:   45 lbs
-* Useful Load:        26 lbs
-* Fuel Capacity:      50 oz, 2.37 lbs
-* Current RTF (Ready to Fly) Weight: 34 lbs
+* All Up-Weight:   42.5 lbs
+* Fuel Capacity:      50 oz, 2.37 lbs // TODO
         
 ### Performance
     
-* Powerplant:       Desert Aircraft DA-50R
 * Max Power:        5 BHP
-* Loiter Endurance: 60+ minutes
-* Cruise Range:     50 nm
-* Stall Speed:      21 kias
-* Loiter Speed:     37 kias
-* Cruise Speed:     55 kias
-* Max Speed:        100 kias
-* Takeoff Distance over a 50ft obstacle: 250 ft
-* Landing Roll:     100 ft
-* Max Rate of Climb: 2000 ft/min
+* Loiter Endurance: 30 minutes
+* Cruise Range:     50 nm // TODO
+* Stall Speed:      27.5 kias
+* Loiter Speed:     37 kias // TODO
+* Cruise Speed:     40 kias
+* Max Speed:        100 kias // TODO
+* Takeoff Distance over a 50ft obstacle: 250 ft // TODO
+* Landing Roll:     100 ft // TODO
+* Max Rate of Climb: 2000 ft/min // TODO
+* Stability Margin (full payload): 0.33 
+* Stability Margin (half payload): 0.16
 -->

@@ -37,4 +37,32 @@ sponsors or officers look like the 404 page.
 
 ## Website Deployment
 
-To deploy the website after updating the code, run `./updateGHCR.sh` in the main directory of the website from the machine you edited the code from. Then, run `./deploy.sh -r` from the server machine (at time of writing, Twoninn).
+Run `./deploy.sh -r` from the server machine (at time of writing, Twoninn).
+
+## Updating the Website
+
+First run `./updateGHCR.sh` in the main directory of the website from the machine you edited the code from. You will need to have a PAT token for github first.
+
+### Generating a Github PAT Token
+
+1. Navigate to GitHub Settings
+    - Go to GitHub and log in.
+    - Click on your profile picture in the top-right corner.
+    - Select Settings.
+2. Open Developer Settings
+    - Scroll down and click Developer Settings (bottom-left sidebar).
+    - Click Personal access tokens → Tokens (classic).
+    - Make sure classic token is selected in the drop down in the middle of the page.
+3. Generate a New Token
+    - Click Generate new token.
+    - Enter a Note to describe the token's purpose.
+    - Set an Expiration date (use 90 days please)
+4. Select Permissions
+    - Repo: All
+    - Workflow
+    - write:packages
+5. Generate and Copy the Token
+    - Click Generate token.
+    - Copy that token into the `.env` file in the correct variable.
+    - Enter your username into the respective environment variable.
+    - MAKE SURE THAT THE `.env` IS IN THE `.gitignore`
