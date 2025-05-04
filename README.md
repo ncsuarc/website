@@ -35,13 +35,9 @@ section to reduce repetition. Since we don't want sponsors or officers to have
 their own page, we use a partial for our 404 page and make the single page for
 sponsors or officers look like the 404 page.
 
-## Website Deployment
-
-Run `./deploy.sh -r` from the server machine (at time of writing, Twoninn).
-
 ## Updating the Website
 
-First run `./updateGHCR.sh` in the main directory of the website from the machine you edited the code from. You will need to have a PAT token for github first.
+First run `./updateGHCR.sh` in the main directory of the website from the machine you edited the code from. You will need to have a PAT token for github first. Next, ssh to the server machine (at time of writing, twoninn), and run `docker login ghcr.io/ncsuarc/login` and login using your username and password. Then deploy the website using `./deploy.sh -r`.
 
 ### Generating a Github PAT Token
 
@@ -62,7 +58,8 @@ First run `./updateGHCR.sh` in the main directory of the website from the machin
     - Workflow
     - write:packages
 5. Generate and Copy the Token
+    - Copy the contents of `.env.template` to a `.env` file.
     - Click Generate token.
     - Copy that token into the `.env` file in the correct variable.
     - Enter your username into the respective environment variable.
-    - MAKE SURE THAT THE `.env` IS IN THE `.gitignore`
+    - MAKE SURE THAT `.env` IS IN THE `.gitignore`
