@@ -34,3 +34,7 @@ We list our sponsors and officers as entries/posts within their page as a
 section to reduce repetition. Since we don't want sponsors or officers to have
 their own page, we use a partial for our 404 page and make the single page for
 sponsors or officers look like the 404 page.
+
+## Website Deployment
+
+To deploy the website after updating the code, run `./updateGHCR.sh` in the main directory of the website from the machine you edited the code from. Then, run `./deploy.sh -r` from the server machine (at time of writing, Twoninn).
