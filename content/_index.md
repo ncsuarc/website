@@ -7,3 +7,5 @@ video_link_2: "https://www.youtube.com/embed/H9LrvBqcJrg?si=wxDnnQffwnLc2Iy"
 
 A multi-disciplinary team of NC State students that specializes in
 designing and building autonomous search and rescue aerial systems.
+
+Our current system is our Kavik Airframe, our first entirely battery-powered system.

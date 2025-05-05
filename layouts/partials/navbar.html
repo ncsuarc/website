@@ -20,7 +20,7 @@
                 {{ .Name }}<b class="caret"></b>
               </a>
               <div class="dropdown-menu {{if in $current_page.RelPermalink .URL}}active{{end}}" aria-labelledby="navbarDropdown">
-                {{ range .Children }}
+                {{ range sort .Children "Weight" }}
                   <a class="dropdown-item" href="{{ .URL }}">
                     {{ .Name }}
                     <span class="sr-only"> (current)</span>
