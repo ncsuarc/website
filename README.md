@@ -37,7 +37,7 @@ sponsors or officers look like the 404 page.
 
 ## Updating the Website
 
-First run `./updateGHCR.sh` in the main directory of the website from the machine you edited the code from. You will need to have a PAT token for github first. Next, ssh to the server machine (at time of writing, twoninn), and run `docker login ghcr.io/ncsuarc/login` and login using your username and password. Then deploy the website using `./deploy.sh -r`.
+To update the website, just push your changes, the workflow will automatically rebuild the image on github. Then just ssh into the server machine (at time of writing, this is twoninn), navigate to the `twoninn-provisioning` directory, and run `docker login ghcr.io/ncsuarc/website` and input your github username and personal access token. The steps to generate a PAT are outlined below.
 
 ### Generating a Github PAT Token
 
@@ -60,6 +60,4 @@ First run `./updateGHCR.sh` in the main directory of the website from the machin
 5. Generate and Copy the Token
     - Copy the contents of `.env.template` to a `.env` file.
     - Click Generate token.
-    - Copy that token into the `.env` file in the correct variable.
-    - Enter your username into the respective environment variable.
-    - MAKE SURE THAT `.env` IS IN THE `.gitignore`
+    - Copy that token. Save it somewhere (preferably somewhere secure, that token is like your password), you won't get it again.
