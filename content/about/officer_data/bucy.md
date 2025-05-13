@@ -2,7 +2,7 @@
 name: "Matthew Bucy"
 role: "Software Team Lead"
 image: "bucy.jpg"
-order: 4
+order: 2
 social:
   linkedin: "https://www.linkedin.com/in/matthew-bucy/" 
   github: "https://github.com/Ranger347"

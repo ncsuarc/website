@@ -2,7 +2,7 @@
 name: "Joseph Sowers"
 role: "Electrical Team Lead"
 image: "sowers.jpg"
-order: 3
+order: 2
 social:
   linkedin: "https://www.linkedin.com/in/joseph-sowers/"
 description: >

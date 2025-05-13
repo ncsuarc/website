@@ -2,7 +2,7 @@
 name: "Leonard Yan"
 role: "Treasurer"
 image: "yan.jpg"
-order: 5
+order: 3
 social:
   linkedin: "https://www.linkedin.com/in/leonard-c-yan/" 
 description: >
