@@ -10,10 +10,10 @@ the following and open `http://localhost:1313/` in your browser.
 hugo server
 ```
 
-Alternatively, a Dockerfile is provided so the following could be used instead.
+Or if you're lazy, you can use docker compose to run it.
 
 ```sh
-docker build -t website . && docker run --name website --network=host website
+docker compose up
 ```
 
 [Hugo]: https://gohugo.io/
