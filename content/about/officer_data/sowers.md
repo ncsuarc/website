@@ -6,5 +6,5 @@ order: 2
 social:
   linkedin: "https://www.linkedin.com/in/joseph-sowers/"
 description: >
-  Leads the electrical team, and also operates the autopilot system during test flights and competitions.
+  Leads the development of the electrical systems on board the aircraft.
 ---

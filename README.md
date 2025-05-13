@@ -37,7 +37,7 @@ sponsors or officers look like the 404 page.
 
 ## Updating the Website
 
-To update the website, just push your changes, the workflow will automatically rebuild the image on github. Then just ssh into the server machine (at time of writing, this is twoninn), navigate to the `twoninn-provisioning` directory, and run `docker login ghcr.io/ncsuarc/website` and input your github username and personal access token. The steps to generate a PAT are outlined below.
+To update the website, just push your changes, the workflow will automatically rebuild the image on github. Then just ssh into the server machine (at time of writing, this is twoninn), navigate to the `twoninn-provisioning` directory, and run `docker login ghcr.io/ncsuarc/website` and input your github username and personal access token. The steps to generate a PAT are outlined below. Then, run `docker pull ghcr.io/ncsuarc/website`. Once that finishes, redeploy the docker network.
 
 ### Generating a Github PAT Token
 

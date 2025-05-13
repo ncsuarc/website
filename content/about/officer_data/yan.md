@@ -6,6 +6,6 @@ order: 3
 social:
   linkedin: "https://www.linkedin.com/in/leonard-c-yan/" 
 description: >
-  Manages the team funds, tracking funding from income sources, bookkeeping, and purchasing.
+  Manages the team funds, tracks funding from income sources, handles bookkeeping and purchasing.
 ---
 
