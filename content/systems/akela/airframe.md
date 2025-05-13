@@ -33,4 +33,3 @@ image: "/images/akela_taxi.jpg"
 * Takeoff Distance: 200 ft
 * Landing Roll:     100 ft
 * Max Rate of Climb: 2000 ft/min
-                

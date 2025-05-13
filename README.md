@@ -4,7 +4,7 @@ The website for ARC's main website.
 
 This website is statically built using the [Hugo] framework. To develop the
 website, download Hugo using your normal package manager (or docker) and run
-the following and open http://localhost:1313/ in your browser.
+the following and open `http://localhost:1313/` in your browser.
 
 ```sh
 hugo server
