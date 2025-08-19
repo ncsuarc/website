@@ -1,10 +1,10 @@
 ---
 name: "Leo Bergmann"
-role: "PR Lead"
+role: "Airframe Lead"
 image: "bergmann.jpg"
-order: 3
+order: 6
 social:
   linkedin: "https://www.linkedin.com/in/leo-bergmann-20aa33268/" 
 description: >
-  Manages Public Relations
+  Leads the design and construction of the aircraft.
 ---

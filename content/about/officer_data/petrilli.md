@@ -1,10 +1,10 @@
 ---
 name: "Mark Petrilli"
-role: "Secretary"
+role: "President"
 image: "petrilli.jpg"
-order: 3
+order: 1
 social:
   linkedin: "https://www.linkedin.com/in/mark-petrilli-811b0124a/" 
 description: >
-  Records notes from meetings and tracks adminstrative tasks for the team
+  Oversees club progress and administration, and leads development of the club's aircraft. In addition, ensures aircraft flies safely during flight tests and competitions.
 ---
