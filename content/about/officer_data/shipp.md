@@ -6,5 +6,5 @@ order: 5
 social:
   linkedin: "https://www.linkedin.com/in/max-shipp/"
 description: >
-  Manages Public Relations
+  Manages Public Relations, Saftey Pilot
 ---
