@@ -1,6 +1,6 @@
 ---
 name: "Max Shipp"
-role: "Public Relations, Saftey Pilot"
+role: "Public Relations, Safety Pilot"
 image: "shipp.jpg"
 order: 5
 social:
