@@ -18,6 +18,6 @@ North Carolina State University
 MAE Box 7910\
 Raleigh, NC 27695
 
-Email: [contact@aerialroboticsclub.com](mailto:contact@aerialroboticsclub.com)
+Email: [aerialrobotics@ncsu.edu](mailto:aerialrobotics@ncsu.edu)
 
 Hours: Stop by our lab anytime, Monday - Friday!
