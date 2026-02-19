@@ -1,3 +1,5 @@
 # Generated webpage
 public/
 resources/
+node_modules/
+package-lock.json
