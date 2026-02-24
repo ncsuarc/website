@@ -1,7 +1,7 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
   <div class="container">
-    <a class="navbar-brand navbar-inline" href="/">
-      <img src="/images/logo.svg" height="45">
+    <a class="navbar-brand navbar-inline" href="{{ "/" | relURL }}">
+      <img src="{{ "/images/logo.svg" | relURL }}" height="45">
       {{/* We only show the title on sm+ devices */}}
       <span class="d-none d-sm-inline-block">{{ .Site.Title }}</span>
     </a>
