@@ -1,45 +1,45 @@
 {{ define "title" }}About ARC{{ end }}
 {{ define "main" }}
-  {{ partial "title.html" . }}
-  <div class="container">
-    <hr/>
-    <div class="row">
-      <div class="col-md-6">
-        {{ .Content }}
-      </div>
-      <div class="col-md-6">
-        <img class="img-fluid" src="{{ "/images/club2024-25.jpg" | relURL }}">
-      </div>
+{{ partial "title.html" . }}
+<div class="container">
+  <hr />
+  <div class="row">
+    <div class="col-md-6">
+      {{ .Content }}
     </div>
-
-
-    <hr/>
-    <div class="row">
-      <div class="col-lg-12">
-        <h2>Our Officers</h2>
-      </div>
-      {{ range .Pages.ByParam "order" }}
-        <div class="col-12 col-sm-6 col-lg-4 mb-3">
-          <div class="card">
-            <img class="card-img-top" src="images/{{ .Params.image }}">
-            <div class="card-body">
-              <h5 class="card-title">
-                {{ .Params.name }} <small class="text-muted">{{ .Params.role }}</small>
-              </h5>
-              <div class="card-text">
-                {{ .Params.description }}
-                <ul class="list-inline float-right mt-1">
-                  {{ range $key, $val := .Params.social }}
-                    <a class="list-inline-item" href="{{$val}}">
-                      <i class="fab fa-2x fa-{{$key}}"></i>
-                    </a>
-                  {{ end }}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      {{ end }}
+    <div class="col-md-6">
+      <img class="img-fluid" src="{{ "images/club2024-25.jpg" | relURL }}">
     </div>
   </div>
+
+
+  <hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Our Officers</h2>
+    </div>
+    {{ range .Pages.ByParam "order" }}
+    <div class="col-12 col-sm-6 col-lg-4 mb-3">
+      <div class="card">
+        <img class="card-img-top" src="images/{{ .Params.image }}">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ .Params.name }} <small class="text-muted">{{ .Params.role }}</small>
+          </h5>
+          <div class="card-text">
+            {{ .Params.description }}
+            <ul class="list-inline float-right mt-1">
+              {{ range $key, $val := .Params.social }}
+              <a class="list-inline-item" href="{{$val}}">
+                <i class="fab fa-2x fa-{{$key}}"></i>
+              </a>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
 {{ end }}
