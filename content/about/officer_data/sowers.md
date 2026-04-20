@@ -1,7 +1,7 @@
 ---
 name: "Joseph Sowers"
 role: "Electrical Lead"
-image: "sowers.jpg"
+image: "images/sowers.jpg"
 order: 8
 social:
   linkedin: "https://www.linkedin.com/in/joseph-sowers/"

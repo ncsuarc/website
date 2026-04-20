@@ -1,7 +1,7 @@
 ---
 name: "Leo Bergmann"
 role: "Airframe Lead"
-image: "bergmann.jpg"
+image: "images/bergmann.jpg"
 order: 6
 social:
   linkedin: "https://www.linkedin.com/in/leo-bergmann-20aa33268/" 

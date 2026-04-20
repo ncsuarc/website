@@ -1,7 +1,7 @@
 ---
 name: "Mark Petrilli"
 role: "President"
-image: "petrilli.jpg"
+image: "images/petrilli.jpg"
 order: 1
 social:
   linkedin: "https://www.linkedin.com/in/mark-petrilli-811b0124a/" 

@@ -6,7 +6,7 @@
     <hr/>
     <div class="row">
       <div class="col-lg-12">
-        <img class="img-responsive" src="{{ .Params.banner_img }}">
+        <img class="img-responsive" src="{{ path.Join .Section .Params.banner_img | relURL }}">
       </div><!-- ./col -->
     </div><!-- /.row -->
 
@@ -40,7 +40,7 @@
           <div class="col-lg-4 col-md-4 col-sm-4">
               <a href="{{ .Params.link }}">
                 <div class="card h-100">
-                  <img class="card-img-top" src="logos/{{ .Params.logo }}" alt="{{ .Title }}">
+                  <img class="card-img-top" src="{{ path.Join .Section .Params.logo | relURL }}" alt="{{ .Title }}">
                   <div class="card-body text-center text-dark">
                     <h5 class="card-title">{{ .Title }}</h5>
                   </div>

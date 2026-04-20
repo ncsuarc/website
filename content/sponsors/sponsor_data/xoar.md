@@ -1,6 +1,6 @@
 ---
 title: Xoar
 link: https://www.xoarintl.com/
-logo: xoar.jpg
+logo: logos/xoar.jpg
 level: 10
 ---

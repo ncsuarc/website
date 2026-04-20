@@ -1,7 +1,7 @@
 ---
 name: "Quinn Merkel"
 role: "Software Lead"
-image: "merkel.jpg"
+image: "images/merkel.jpg"
 order: 9
 social:
   linkedin: "https://www.linkedin.com/in/quinn-merkel/" 

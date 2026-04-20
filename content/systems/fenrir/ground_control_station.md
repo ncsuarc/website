@@ -1,6 +1,6 @@
 ---
 title: "Ground Control Station"
-image: "/images/autopilot_tuning.jpg"
+image: "images/autopilot_tuning.jpg"
 ---
 
 ### Autopilot

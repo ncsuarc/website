@@ -23,7 +23,7 @@
           <div class="dropdown-menu {{if in $current_page.RelPermalink .URL}}active{{end}}"
             aria-labelledby="navbarDropdown">
             {{ range sort .Children "Weight" }}
-            <a class="dropdown-item" href="{{ .URL }}">
+            <a class="dropdown-item" href="{{ if or (hasPrefix .URL "http://") (hasPrefix .URL "https://") (hasPrefix .URL "mailto:") }}{{ .URL }}{{ else }}{{ strings.TrimPrefix "/" .URL | relURL }}{{ end }}">
               {{ .Name }}
               <span class="sr-only"> (current)</span>
             </a>
@@ -32,7 +32,7 @@
         </li>
         {{ else }}
         <li class="nav-item {{if in $current_page.RelPermalink .URL}}active{{end}}">
-          <a class="nav-link" href="{{ .URL }}">
+          <a class="nav-link" href="{{ if or (hasPrefix .URL "http://") (hasPrefix .URL "https://") (hasPrefix .URL "mailto:") }}{{ .URL }}{{ else }}{{ strings.TrimPrefix "/" .URL | relURL }}{{ end }}">
             {{ .Name }}<span class="sr-only"> (current)</span>
           </a>
         </li>

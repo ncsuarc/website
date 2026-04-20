@@ -8,7 +8,7 @@
       {{ .Content }}
     </div>
     <div class="col-md-6">
-      <img class="img-fluid" src="{{ "images/club2024-25.jpg" | relURL }}">
+      <img class="img-fluid" src="{{ path.Join .Section .Params.image  | relURL }}">
     </div>
   </div>
 
@@ -21,7 +21,7 @@
     {{ range .Pages.ByParam "order" }}
     <div class="col-12 col-sm-6 col-lg-4 mb-3">
       <div class="card">
-        <img class="card-img-top" src="images/{{ .Params.image }}">
+        <img class="card-img-top" src="{{ path.Join .Section .Params.image | relURL }}">
         <div class="card-body">
           <h5 class="card-title">
             {{ .Params.name }} <small class="text-muted">{{ .Params.role }}</small>

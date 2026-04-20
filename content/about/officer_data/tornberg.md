@@ -1,7 +1,7 @@
 ---
 name: "Nick Tornberg"
 role: "Webmaster"
-image: "tornberg.jpg"
+image: "images/tornberg.jpg"
 order: 10
 social:
     linkedin: https://www.linkedin.com/in/nicholas-tornberg/
