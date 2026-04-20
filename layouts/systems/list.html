@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <img class="img-responsive img-fit" src="{{ path.Join .Section .Params.image | relURL }}">
+        <img class="img-responsive img-fit" src="{{ path.Join "/" .File.Dir .Params.image | relURL }}">
       </div>
     </div>
 
@@ -34,7 +34,7 @@
                 {{ .Content }}
               </div><!-- ./col -->
               <div class="col-sm-6 align-self-center">
-                <img class="img-responsive img-fit" src="{{ path.Join .Section .Params.image | relURL }}">
+                <img class="img-responsive img-fit" src="{{ path.Join "/" .File.Dir .Params.image | relURL }}">
               </div><!-- ./col -->
             </div><!-- ./row -->
           </div><!-- ./card-body -->
