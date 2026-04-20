@@ -1,6 +1,6 @@
 ---
 title: "Akela"
-image: "images/akela_night.jpg"
+image: "akela/images/akela_night.jpg"
 ---
 
 

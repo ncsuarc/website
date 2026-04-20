@@ -1,6 +1,6 @@
 ---
 title: "Autopilot"
-image: "images/pixhawk_generic.jpg"
+image: "kavik/images/pixhawk_generic.jpg"
 ---
 
 ### Pixhawk 2.1
