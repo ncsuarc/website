@@ -1,6 +1,6 @@
 ---
 title: "Imagery"
-image: "images/ncsu_arc.jpg"
+image: "akela/images/ncsu_arc.jpg"
 ---
 
 ### Image Capture
