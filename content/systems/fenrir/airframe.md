@@ -1,6 +1,6 @@
 ---
 title: "Airframe"
-image: "/images/fenrir_takeoff.jpg"
+image: "images/fenrir_takeoff.jpg"
 ---
 
 ### Features

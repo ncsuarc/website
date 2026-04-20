@@ -1,6 +1,6 @@
 ---
 title: "Airframe"
-image: "/images/akela_taxi.jpg"
+image: "images/akela_taxi.jpg"
 ---
 
 ### Features

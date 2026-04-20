@@ -1,7 +1,7 @@
 ---
 name: "Rohan Hopper"
 role: "Drop Lead"
-image: "hopper.jpg"
+image: "images/hopper.jpg"
 order: 7
 social:
   linkedin: https://www.linkedin.com/in/rohanjhopper/

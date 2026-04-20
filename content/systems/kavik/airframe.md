@@ -1,6 +1,6 @@
 ---
 title: "Airframe"
-image: "/images/kavik_wingtip.jpg"
+image: "images/kavik_wingtip.jpg"
 ---
 
 ### Features

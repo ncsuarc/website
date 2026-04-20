@@ -1,6 +1,6 @@
 ---
 title: "Autopilot"
-image: "/images/piccolo_ap.jpg"
+image: "images/piccolo_ap.jpg"
 ---
 
 ### System

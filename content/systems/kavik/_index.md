@@ -1,6 +1,6 @@
 ---
 title: "Kavik"
-image: "/images/kavik.jpg"
+image: "images/kavik.jpg"
 ---
 
 # Our System

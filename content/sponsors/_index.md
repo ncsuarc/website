@@ -1,7 +1,7 @@
 ---
 title: "About Our Sponsors"
 subtitle: "Supporting ARC's Success"
-banner_img: "../images/sponsor_banner_80.jpg"
+banner_img: "logos/sponsor_banner_80.jpg"
 ---
 
 ## Sponsoring ARC
