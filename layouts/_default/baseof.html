@@ -10,7 +10,7 @@
   <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 
   {{/* Bootstrap CSS */}}
-  {{ $style := resources.Get "scss/custom.scss" | resources.ToCSS | resources.Minify }}
+  {{ $style := resources.Get "scss/custom.scss" | css.Sass | resources.Minify }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>
 
