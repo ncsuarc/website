@@ -55,6 +55,11 @@ menu:
     url: "https://confluence.aerialroboticsclub.com"
 
 params:
+  join:
+    interestFormURL: "https://go.ncsu.edu/jwpxnqn"
+    slackURL: "https://join.slack.com/t/ncsuarc/shared_invite/zt-471os635j-S59JnfhbSRHtv~wzRPADbQ"
+  analytics:
+    clarityProjectID: "weylt1jd0h"
   sponsorship:
     levels:
       10: "Supporters"

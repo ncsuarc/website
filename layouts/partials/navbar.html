@@ -1,7 +1,7 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white border-bottom" aria-label="Primary navigation">
   <div class="container">
     <a class="navbar-brand navbar-inline" href="{{ .Site.Home.RelPermalink }}">
-      <img src="{{ "images/logo.svg" | relURL }}" height="45">
+      <img src="{{ "images/logo.svg" | relURL }}" height="45" width="45" alt="">
       {{/* We only show the title on sm+ devices */}}
       <span class="d-none d-sm-inline-block">{{ .Site.Title }}</span>
     </a>
@@ -12,18 +12,19 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       {{/* ml-auto adds a left margin, meaning the items are right aligned */}}
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
         {{ $current_page := . }}
         {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
         <li class="nav-item dropdown {{if in $current_page.RelPermalink .URL}}active{{end}}">
-          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="nav-{{ .Identifier }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {{ .Name }}<b class="caret"></b>
           </a>
           <div class="dropdown-menu {{if in $current_page.RelPermalink .URL}}active{{end}}"
-            aria-labelledby="navbarDropdown">
+            aria-labelledby="nav-{{ .Identifier }}">
             {{ range sort .Children "Weight" }}
-            <a class="dropdown-item" href="{{ if or (hasPrefix .URL "http://") (hasPrefix .URL "https://") (hasPrefix .URL "mailto:") }}{{ .URL }}{{ else }}{{ .URL | relURL }}{{ end }}">
+            {{ $external := or (hasPrefix .URL "http://") (hasPrefix .URL "https://") }}
+            <a class="dropdown-item" href="{{ if or $external (hasPrefix .URL "mailto:") }}{{ .URL }}{{ else }}{{ .URL | relURL }}{{ end }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
               {{ .Name }}
               <span class="sr-only"> (current)</span>
             </a>
@@ -39,6 +40,7 @@
         {{ end }}
         {{ end }}
       </ul>
+      <a class="btn btn-primary nav-join ml-lg-3" href="{{ if .IsHome }}#join{{ else }}{{ "/contact/#join" | relURL }}{{ end }}">Join ARC</a>
     </div>
   </div>
 </nav>

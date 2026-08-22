@@ -2,11 +2,10 @@
 {{ define "main" }}
   {{ partial "title.html" . }}
 
-  <div class="container">
-    <hr/>
+  <div class="container site-section">
     <div class="row">
       <div class="col-lg-12">
-        <img class="img-responsive" src="{{ path.Join .Section .Params.banner_img | relURL }}">
+        <img class="img-fluid media-frame" src="{{ path.Join .Section .Params.banner_img | relURL }}" alt="Aerial Robotics Club sponsors">
       </div><!-- ./col -->
     </div><!-- /.row -->
 
@@ -38,7 +37,7 @@
       <div class="row align-items-center">
         {{ range .Pages.ByTitle }}
           <div class="col-lg-4 col-md-4 col-sm-4">
-              <a href="{{ .Params.link }}">
+              <a href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">
                 <div class="card h-100">
                   <img class="card-img-top" src="{{ path.Join .Section .Params.logo | relURL }}" alt="{{ .Title }}">
                   <div class="card-body text-center text-dark">
