@@ -26,3 +26,5 @@ Our general meetings are held on Thursdays from 7:30pm to 8:30pm in EB3 2220. Th
 #### Other Ways to Get In Touch
 
 Besides emailing [aerialrobotics@ncsu.edu](mailto:aerialrobotics@ncsu.edu), you are more than welcome to get in touch with any of the officers listed in the [About](/about) page. Our officers are more than happy to help!
+
+Alternatively, you can find more information on our instagram aerialroboticsclub (https://www.instagram.com/aerialroboticsclub/).

@@ -1,6 +1,6 @@
 ---
 name: "Rohan Hopper"
-role: "Drop Lead"
+role: "Payload Lead"
 image: "images/hopper.jpg"
 order: 7
 social:

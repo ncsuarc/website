@@ -21,3 +21,13 @@ Raleigh, NC 27695
 Email: [aerialrobotics@ncsu.edu](mailto:aerialrobotics@ncsu.edu)
 
 Hours: Stop by our lab anytime, Monday - Friday!
+
+---
+
+#### Instagram
+
+aerialroboticsclub
+
+Aerial Robotics Club
+
+Link: https://www.instagram.com/aerialroboticsclub/
