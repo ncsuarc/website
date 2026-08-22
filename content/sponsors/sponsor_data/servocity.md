@@ -1,6 +1,6 @@
 ---
 title: Servo City
 link: https://www.servocity.com/
-logo: logos/servocity.jpg
+logo: logos/servocity.webp
 level: 10
 ---

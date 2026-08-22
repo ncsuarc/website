@@ -1,7 +1,7 @@
 ---
 name: "Jay Mewborn"
 role: "Secretary"
-image: "images/mewborn.jpg"
+image: "images/mewborn.webp"
 order: 3
 social:
   linkedin: https://www.linkedin.com/in/jay-mewborn-2108b0279/

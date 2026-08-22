@@ -1,7 +1,7 @@
 ---
 name: "Leonard Yan"
 role: "Vice President"
-image: "images/yan.jpg"
+image: "images/yan.webp"
 order: 2
 social:
   linkedin: "https://www.linkedin.com/in/leonard-c-yan/" 

@@ -37,24 +37,9 @@ menu:
     url: "/systems/kavik"
     weight: 3
 
-  - identifier: "member"
-    name: "Member Pages"
-    weight: 2
-    url: "nourl"
-
-  - parent: "member"
-    name: "Jira"
-    url: "https://jira.aerialroboticsclub.com"
-
-  - parent: "member"
-    name: "Redmine"
-    url: "https://redmine.aerialroboticsclub.com"
-  
-  - parent: "member"
-    name: "Confluence"
-    url: "https://confluence.aerialroboticsclub.com"
-
 params:
+  description: "NC State's student-led Aerial Robotics Club designs, builds, and competes with autonomous aircraft."
+  socialImage: "images/club2024-25.jpg"
   join:
     interestFormURL: "https://go.ncsu.edu/jwpxnqn"
     slackURL: "https://join.slack.com/t/ncsuarc/shared_invite/zt-471os635j-S59JnfhbSRHtv~wzRPADbQ"

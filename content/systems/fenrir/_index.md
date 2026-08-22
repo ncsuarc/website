@@ -1,6 +1,6 @@
 ---
 title: "Fenrir"
-image: "fenrir/images/system_80.jpg"
+image: "fenrir/images/system_80.webp"
 ---
 
 # Our System

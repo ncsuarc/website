@@ -1,6 +1,6 @@
 ---
 title: "Autopilot"
-image: "akela/images/pixhawk_generic.jpg"
+image: "akela/images/pixhawk_generic.webp"
 ---
 
 ### Pixhawk 2.1

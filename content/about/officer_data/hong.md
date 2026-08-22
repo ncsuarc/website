@@ -1,7 +1,7 @@
 ---
 name: "Sam Hong"
 role: "Treasurer"
-image: "images/hong.jpg"
+image: "images/hong.webp"
 order: 4
 social:
   linkedin: https://www.linkedin.com/in/geonyeong-hong-984880344/

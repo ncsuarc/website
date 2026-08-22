@@ -1,7 +1,7 @@
 ---
 name: "Max Shipp"
 role: "Public Relations, Safety Pilot"
-image: "images/shipp.jpg"
+image: "images/shipp.webp"
 order: 5
 social:
   linkedin: "https://www.linkedin.com/in/max-shipp/"
