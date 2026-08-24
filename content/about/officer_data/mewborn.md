@@ -1,10 +1,10 @@
 ---
 name: "Jay Mewborn"
-role: "Secretary"
+role: "President"
 image: "images/mewborn.webp"
-order: 3
+order: 1
 social:
-  linkedin: https://www.linkedin.com/in/jay-mewborn-2108b0279/
+  linkedin: "https://www.linkedin.com/in/jay-mewborn-2108b0279/"
 description: >
-  Records notes from meetings and tracks administrative tasks for the team
+  Oversees club progress and administration, and leads development of the club's aircraft.
 ---

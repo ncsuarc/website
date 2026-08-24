@@ -71,8 +71,8 @@
 <section class="container site-section timeline-section" aria-label="Club competition history">
   <ul class="timeline">
     {{ $counter := 0 }}
-    {{ range (where .Site.Pages "Section" "homepage").Reverse }}
-    {{ if isset .Params "timeline" }}
+    {{ $timelinePages := where (where .Site.RegularPages "Section" "homepage") "Params.timeline" true }}
+    {{ range sort $timelinePages "File.BaseFileName" "desc" }}
     {{ if eq (mod $counter 2) 0 }}
     <li>
       <div class="timeline-badge"></div>
@@ -89,7 +89,6 @@
         {{ .Content }}
       </div>
     </li>
-    {{ end }}
     {{ end }}
     {{ $counter = add $counter 1 }}
     {{end}}

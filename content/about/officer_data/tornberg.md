@@ -1,10 +1,10 @@
 ---
-name: "Nick Tornberg"
-role: "Webmaster"
+name: "Nicholas Tornberg"
+role: "Vice President"
 image: "images/tornberg.webp"
-order: 10
+order: 2
 social:
-    linkedin: https://www.linkedin.com/in/nicholas-tornberg/
+  linkedin: "https://www.linkedin.com/in/nicholas-tornberg/"
 description: >
-  Develops and maintains the website and other web resources the club uses.
+  Assists the president with team administration and helps lead development of the club's aircraft systems.
 ---
