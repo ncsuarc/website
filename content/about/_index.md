@@ -1,6 +1,7 @@
 ---
 title: "About"
 subtitle: "Meet the Club"
+description: "Meet the NC State students who design, build, and operate ARC's autonomous aircraft."
 type: "about"
 ---
 

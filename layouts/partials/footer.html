@@ -1,23 +1,31 @@
-<footer class="container">
-  <hr>
-  <div class="row">
-    <div class="col-sm-8">
-      <p>Copyright &copy; Aerial Robotics Club at NC State {{ now.Year }}</p>
-    </div><!-- ./col -->
+<footer class="site-footer mt-5">
+  <div class="container site-footer__inner">
+    <div class="row align-items-center">
+      <div class="col-lg-5 mb-2 mb-lg-0">
+        <p class="mb-0">
+          Copyright &copy; Aerial Robotics Club at NC State {{ now.Year }}
+          <span class="footer-separator" aria-hidden="true">&middot;</span>
+          <button class="analytics-settings" type="button" data-analytics-settings>Analytics settings</button>
+        </p>
+      </div>
 
-    <div class="col-sm-4 text-right">
-      <a href="mailto:aerialrobotics@ncsu.edu" class="px-2">
-        <i class="far fa-envelope fa-2x"></i>
+      <div class="col-lg-7 text-lg-right social-links">
+      <a href="mailto:aerialrobotics@ncsu.edu" class="px-2" aria-label="Email ARC">
+        <span class="footer-link-label">Email</span>
       </a>
-      <a href="https://www.facebook.com/ncsuarc" class="px-2">
-        <i class="fab fa-facebook fa-2x"></i>
+      <a href="https://www.facebook.com/ncsuarc" class="px-2" target="_blank" rel="noopener noreferrer" aria-label="ARC on Facebook">
+        <span class="footer-link-label">Facebook</span>
       </a>
-      <a href="https://www.linkedin.com/company/arc-ncsu/about/" class="px-2">
-        <i class="fab fa-linkedin fa-2x"></i>
+      <a href="https://www.linkedin.com/company/arc-ncsu/about/" class="px-2" target="_blank" rel="noopener noreferrer" aria-label="ARC on LinkedIn">
+        <span class="footer-link-label">LinkedIn</span>
       </a>
-      <a href="https://github.com/ncsuarc" class="px-2">
-        <i class="fab fa-github fa-2x"></i>
+      <a href="{{ .Site.Params.social.instagramURL }}" class="px-2" target="_blank" rel="noopener noreferrer" aria-label="ARC on Instagram">
+        <span class="footer-link-label">Instagram</span>
       </a>
-    </div><!-- ./col -->
-  </div><!-- ./row -->
+      <a href="https://github.com/ncsuarc" class="px-2" target="_blank" rel="noopener noreferrer" aria-label="ARC on GitHub">
+        <span class="footer-link-label">GitHub</span>
+      </a>
+      </div>
+    </div>
+  </div>
 </footer>

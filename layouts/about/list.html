@@ -1,29 +1,27 @@
 {{ define "title" }}About ARC{{ end }}
 {{ define "main" }}
 {{ partial "title.html" . }}
-<div class="container">
-  <hr />
+<div class="container site-section">
   <div class="row">
     <div class="{{ if .Params.image }}col-md-6{{ else }}col-12{{ end }}">
       {{ .Content }}
     </div>
     {{ with .Params.image }}
     <div class="col-md-6">
-      <img class="img-fluid" src="{{ path.Join $.Section . | relURL }}" alt="">
+      <img class="img-fluid media-frame" src="{{ path.Join $.Section . | relURL }}" alt="Aerial Robotics Club members" decoding="async">
     </div>
     {{ end }}
   </div>
 
-
-  <hr />
-  <div class="row">
+  <div class="row mt-5">
     <div class="col-lg-12">
       <h2>Our Officers</h2>
     </div>
     {{ range .Pages.ByParam "order" }}
+    {{ $officer := . }}
     <div class="col-12 col-sm-6 col-lg-4 mb-3">
-      <div class="card">
-        <img class="card-img-top" src="{{ path.Join .Section .Params.image | relURL }}">
+      <div class="card officer-card h-100">
+        <img class="card-img-top" src="{{ path.Join .Section .Params.image | relURL }}" alt="{{ .Params.name }}, {{ .Params.role }}" loading="lazy" decoding="async">
         <div class="card-body">
           <h5 class="card-title">
             {{ .Params.name }} <small class="text-muted">{{ .Params.role }}</small>
@@ -32,9 +30,11 @@
             {{ .Params.description }}
             <ul class="list-inline float-right mt-1">
               {{ range $key, $val := .Params.social }}
-              <a class="list-inline-item" href="{{$val}}">
-                <i class="fab fa-2x fa-{{$key}}"></i>
-              </a>
+              <li class="list-inline-item">
+                <a href="{{$val}}" target="_blank" rel="noopener noreferrer" aria-label="{{ $officer.Params.name }} on {{ $key }}">
+                  <span class="officer-social-label">{{ $key | title }}</span>
+                </a>
+              </li>
               {{ end }}
             </ul>
           </div>

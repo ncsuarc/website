@@ -1,10 +1,10 @@
 ---
 name: "Mark Petrilli"
-role: "President"
-image: "images/petrilli.jpg"
-order: 1
+role: "Historian"
+image: "images/petrilli.webp"
+order: 12
 social:
-  linkedin: "https://www.linkedin.com/in/mark-petrilli-811b0124a/" 
+  linkedin: "https://www.linkedin.com/in/mark-petrilli-811b0124a/"
 description: >
-  Oversees club progress and administration, and leads development of the club's aircraft.
+  Preserves the history and traditions of the club.
 ---

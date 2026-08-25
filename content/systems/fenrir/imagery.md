@@ -1,7 +1,7 @@
 
 ---
 title: "Imagery"
-image: "fenrir/images/ncsu_arc.jpg"
+image: "fenrir/images/ncsu_arc.webp"
 ---
 
 ### Image Capture

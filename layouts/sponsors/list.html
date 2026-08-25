@@ -2,45 +2,49 @@
 {{ define "main" }}
   {{ partial "title.html" . }}
 
-  <div class="container">
-    <hr/>
+  <div class="container site-section">
     <div class="row">
       <div class="col-lg-12">
-        <img class="img-responsive" src="{{ path.Join .Section .Params.banner_img | relURL }}">
+        <img class="img-fluid media-frame" src="{{ path.Join .Section .Params.banner_img | relURL }}" alt="Aerial Robotics Club sponsors" decoding="async" fetchpriority="high">
       </div><!-- ./col -->
     </div><!-- /.row -->
 
-    <hr/>
-    <div class="row">
-      <div class="col-md-8">
+    <div class="row align-items-center sponsor-intro">
+      <div class="col-lg-8">
+        <h2>Partner with ARC</h2>
         {{ .Content }}
-      </div><!-- /.col-->
-
-      {{ range where .Pages "Title" "Sponsoring ARC" }}
-      <div class="col-md-4">
-        {{ .Content }}
-        <a class="btn btn-primary" href="{{ .Params.contact_url }}">Contact Us</a>
-      </div><!-- ./col -->
-      {{ end }}
-
-    </div><!-- /.row -->
+      </div>
+      <div class="col-lg-4 mt-3 mt-lg-0 text-lg-right">
+        <a class="btn btn-primary" href="{{ "/contact/" | relURL }}">Discuss sponsorship</a>
+      </div>
+    </div>
   </div><!-- ./container -->
 
-  <div class="container">
+  <div class="container sponsors-list">
+    {{ $sectionPages := where .Site.RegularPages "Section" .Section }}
+    {{ $sponsors := where $sectionPages "Params.logo" "like" ".+" }}
     {{/* Put higher levels first */}}
-    {{ range (.Pages.GroupByParam "Level").Reverse }}
-      {{ with index $.Site.Params.sponsorship.levels .Key }}
+    {{ range (slice 20 10) }}
+      {{ $level := . }}
+      {{ $levelSponsors := slice }}
+      {{ range $sponsors }}
+        {{ if eq (int .Params.level) $level }}
+          {{ $levelSponsors = $levelSponsors | append . }}
+        {{ end }}
+      {{ end }}
+      {{ if $levelSponsors }}
+      {{ with index $.Site.Params.sponsorship.levels (string $level) }}
         <hr/>
         <h2 class="page-header">{{ . }}</h2>
       {{ else }}
-        {{ errorf "%d is not a known sponsorship level see [params.sponsorship.level] in `config.toml`." .Key }}
+        {{ errorf "%d is not a known sponsorship level; see [params.sponsorship.levels] in `config.yaml`." $level }}
       {{ end }}
-      <div class="row align-items-center">
-        {{ range .Pages.ByTitle }}
-          <div class="col-lg-4 col-md-4 col-sm-4">
-              <a href="{{ .Params.link }}">
-                <div class="card h-100">
-                  <img class="card-img-top" src="{{ path.Join .Section .Params.logo | relURL }}" alt="{{ .Title }}">
+      <div class="row align-items-stretch sponsor-grid">
+        {{ range sort $levelSponsors "Title" }}
+          <div class="col-lg-4 col-md-6 mb-4">
+              <a class="sponsor-link" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">
+                <div class="card sponsor-card h-100">
+                  <img class="card-img-top" src="{{ path.Join .Section .Params.logo | relURL }}" alt="{{ .Title }}" loading="lazy" decoding="async">
                   <div class="card-body text-center text-dark">
                     <h5 class="card-title">{{ .Title }}</h5>
                   </div>
@@ -49,6 +53,7 @@
           </div>
         {{ end }}
       </div>
+      {{ end }}
     {{ end }}
   </div><!-- /.container -->
 {{ end }}

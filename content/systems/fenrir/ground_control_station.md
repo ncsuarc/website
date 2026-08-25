@@ -1,6 +1,6 @@
 ---
 title: "Ground Control Station"
-image: "fenrir/images/autopilot_tuning.jpg"
+image: "fenrir/images/autopilot_tuning.webp"
 ---
 
 ### Autopilot

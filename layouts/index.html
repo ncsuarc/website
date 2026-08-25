@@ -1,37 +1,39 @@
 {{ define "main" }}
-<div class="hero homepage-hero text-white">
-  <div class="container my-auto">
-    <div class="row">
-      <div class="col-lg-6 my-5">
-        <h1 class="display-4">
-          The <span class="font-weight-bold">{{ .Title }}</span> at NC
-          State
-        </h1>
-        <p class="lead">
-          {{ .Content }}
-        </p>
+<section class="hero homepage-hero text-white">
+  <div class="container my-auto py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7 pr-lg-5 hero-copy">
+        <h1>The <span class="font-weight-bold">{{ .Title }}</span> at NC State</h1>
+        <div class="lead">{{ .Content }}</div>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="{{ .Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Interest Meeting Signup</a>
+          <a class="btn btn-outline-light btn-lg" href="{{ .Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Join Slack</a>
+        </div>
       </div>
-      <div class="col-lg-6 my-1">
-        <div class="embed-responsive embed-responsive-16by9">
+      <div class="col-lg-5 mt-4 mt-lg-0 hero-videos">
+        <div class="embed-responsive embed-responsive-16by9 video-frame">
           <iframe src="{{ .Params.video_link_1 }}"
+            title="Aerial Robotics Club video"
+            loading="lazy"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="embed-responsive embed-responsive-16by9 my-5">
+        <div class="embed-responsive embed-responsive-16by9 video-frame mt-3">
           <iframe src="{{ .Params.video_link_2 }}"
+            title="Aerial Robotics Club team video"
+            loading="lazy"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 
-<div class="container">
-  <hr />
+<section class="container site-section capabilities-section">
   <div class="row">
     {{ range (where .Site.Pages "Section" "homepage").ByParam "order" }}
     {{ if isset .Params "order" }}
-    <div class="col-sm-4">
+    <div class="col-md-4 capability-column">
       <h4>
         {{ .Title }}
       </h4>
@@ -40,31 +42,37 @@
     {{ end }}
     {{ end }}
   </div><!-- ./row -->
-  <hr />
-</div><!-- ./container -->
+</section>
 
-<div class="container">
-  <hr />
-  <div class="row">
+<section class="join-band" id="join">
+  <div class="container site-section">
+  <div class="row align-items-stretch">
     {{ range (where .Site.Pages "Section" "homepage").Reverse }}
     {{ if isset .Params "link" }}
-    <div class="col-sm-6 text-center">
+    <div class="col-md-6 text-center join-column">
       <h5>
         {{ .Content }}
       </h5>
-      <a class="btn btn-primary" href={{ .Params.link }}>{{ .Title }}</a>
+      {{ if eq .Title "How to Join" }}
+      <div class="join-actions justify-content-center">
+        <a class="btn btn-primary" href="{{ $.Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Interest Form</a>
+        <a class="btn btn-outline-secondary" href="{{ $.Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Slack</a>
+      </div>
+      {{ else }}
+      <a class="btn btn-primary" href="{{ .Params.link | relURL }}">About ARC</a>
+      {{ end }}
     </div><!-- ./col -->
     {{ end }}
     {{ end }}
   </div><!-- ./row -->
-  <hr />
-</div><!-- ./container -->
+  </div>
+</section>
 
-<div class="container">
+<section class="container site-section timeline-section" aria-label="Club competition history">
   <ul class="timeline">
     {{ $counter := 0 }}
-    {{ range (where .Site.Pages "Section" "homepage").Reverse }}
-    {{ if isset .Params "timeline" }}
+    {{ $timelinePages := where (where .Site.RegularPages "Section" "homepage") "Params.timeline" true }}
+    {{ range sort $timelinePages "File.BaseFileName" "desc" }}
     {{ if eq (mod $counter 2) 0 }}
     <li>
       <div class="timeline-badge"></div>
@@ -82,9 +90,8 @@
       </div>
     </li>
     {{ end }}
-    {{ end }}
     {{ $counter = add $counter 1 }}
     {{end}}
   </ul>
-</div>
+</section>
 {{ end }}

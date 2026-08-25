@@ -1,40 +1,99 @@
 {{ define "title" }}Contact{{ end }}
 {{ define "main" }}
 {{ partial "title.html" . }}
-<div class="container">
-  <hr />
-  <div class="row">
-    <div class="col-lg-12">
-      <!--
-            Embedded Google Map using an iframe - to select your location find it
-            on Google maps and paste the link as the iframe src. If you want to use
-            the Google Maps API instead then have at it!
-          -->
-      <div class="embed-responsive embed-responsive-21by9">
-        <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-          src="https://www.google.com/maps?sll=35.77105309999947,-78.67345216639923&amp;sspn=0.007129072974565932,0.01714419497581687&amp;t=m&amp;q=Aerial+Robotics+Club&amp;ie=UTF8&amp;hq=Aerial+Robotics+Club&amp;hnear=&amp;ll=35.771726,-78.674051&amp;spn=0.001741,0.004292&amp;z=18&amp;iwloc=A&amp;output=embed"></iframe>
+<section class="join-band join-band--page" id="join">
+  <div class="container py-5 text-center">
+    <h2>Join ARC</h2>
+    <p class="lead mb-4">Interested in building autonomous aircraft with us? Start with an interest meeting or join the club Slack.</p>
+    <div class="join-actions justify-content-center">
+      <a class="btn btn-primary btn-lg" href="{{ .Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Interest Meeting Form</a>
+      <a class="btn btn-outline-secondary btn-lg" href="{{ .Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Join Our Slack</a>
+    </div>
+  </div>
+</section>
+<section class="calendar-section" aria-labelledby="upcoming-events-heading">
+  <div class="container">
+    <div class="calendar-heading-row">
+      <div>
+        <h2 id="upcoming-events-heading">Upcoming events</h2>
+        <p class="text-muted mb-0">Interest meetings, general meetings, and other club events.</p>
       </div>
     </div>
-  </div><!-- /.row -->
-
-  <hr />
-  <div class="row">
-    <div class="col-sm-8">
-      {{ .Content }}
-      <hr />
-      <div class="embed-responsive embed-responsive-4by3">
-        <iframe
-          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YWVyaWFscm9ib3RpY3NAbmNzdS5lZHU&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%230B8043"
-          style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <div class="row align-items-stretch mt-4">
+      <div class="col-lg-8">
+        <div class="calendar-frame">
+          <iframe
+            title="Upcoming Aerial Robotics Club events"
+            loading="lazy"
+            src="https://calendar.google.com/calendar/embed?height=560&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;src=YWVyaWFscm9ib3RpY3NAbmNzdS5lZHU&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23cc0000&amp;color=%23616161"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="calendar-embed-help">
+          Calendar not loading?
+          <a href="https://calendar.google.com/calendar/embed?wkst=1&amp;ctz=America%2FNew_York&amp;src=YWVyaWFscm9ib3RpY3NAbmNzdS5lZHU&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer">View all events in Google Calendar</a>.
+        </p>
+      </div>
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <aside class="meeting-summary">
+          <h3>Weekly meetings</h3>
+          <dl class="meeting-details">
+            <div>
+              <dt>When</dt>
+              <dd>{{ .Params.meeting_schedule }}</dd>
+            </div>
+            <div>
+              <dt>Meeting room</dt>
+              <dd>{{ .Params.meeting_room }}</dd>
+            </div>
+            <div>
+              <dt>ARC lab</dt>
+              <dd>{{ .Params.lab_room }}</dd>
+            </div>
+          </dl>
+          <p class="text-muted">Times and rooms can change. The live calendar is the source of truth for each meeting.</p>
+          <a class="btn btn-outline-primary" href="https://calendar.google.com/calendar/embed?wkst=1&amp;ctz=America%2FNew_York&amp;src=YWVyaWFscm9ib3RpY3NAbmNzdS5lZHU&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer">Open full calendar</a>
+        </aside>
       </div>
     </div>
-
-    {{ range where .Pages "Title" "Aerial Robotics Club at NC State" }}
-    <div class="col-sm-4">
-      <h3>{{ .Title }}</h3>
+  </div>
+</section>
+<div class="container site-section">
+  <div class="row align-items-start">
+    <div class="col-lg-7">
       {{ .Content }}
     </div>
-    {{ end }}
-  </div><!-- /.row -->
-</div><!-- /.container -->
+
+    <div class="col-lg-5 mt-4 mt-lg-0">
+      <aside class="location-card" aria-labelledby="location-card-heading">
+        <div class="location-card__heading">
+          <svg class="location-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Zm0-9.5A3.5 3.5 0 1 1 12 5a3.5 3.5 0 0 1 0 7.5Z"/>
+          </svg>
+          <div>
+            <h3 id="location-card-heading">Visit the ARC lab</h3>
+            <p class="text-muted mb-0">NC State Centennial Campus</p>
+          </div>
+        </div>
+
+        <address class="location-card__address">
+          <strong>{{ .Params.lab_room }}</strong><br>
+          {{ .Params.street_address }}<br>
+          {{ .Params.city_state_zip }}
+        </address>
+
+        <div class="location-card__meeting">
+          <span>General meetings</span>
+          <strong>{{ .Params.meeting_room }}</strong>
+          <span>{{ .Params.meeting_schedule }}</span>
+        </div>
+
+        <div class="location-card__actions">
+          <a class="btn btn-primary" href="{{ .Params.directions_url }}" target="_blank" rel="noopener noreferrer">Get directions</a>
+          <a class="btn btn-outline-secondary" href="mailto:aerialrobotics@ncsu.edu">Email ARC</a>
+          <a class="btn btn-outline-secondary" href="{{ .Site.Params.social.instagramURL }}" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
 {{ end }}

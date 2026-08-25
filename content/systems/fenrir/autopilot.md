@@ -1,6 +1,6 @@
 ---
 title: "Autopilot"
-image: "fenrir/images/piccolo_ap.jpg"
+image: "fenrir/images/piccolo_ap.webp"
 ---
 
 ### System

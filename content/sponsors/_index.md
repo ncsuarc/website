@@ -1,12 +1,9 @@
 ---
 title: "About Our Sponsors"
 subtitle: "Supporting ARC's Success"
-banner_img: "logos/sponsor_banner_80.jpg"
+description: "Meet the companies and organizations supporting NC State's Aerial Robotics Club."
+banner_img: "logos/sponsor_banner_80.webp"
+social_image: "sponsors/logos/sponsor_banner_80.jpg"
 ---
 
-## Sponsoring ARC
-
-Whether it's equipment or funding, we need sponsors to succeed. Our
-system is comprised of some of the best technology available, and
-without corporate sponsors we would not be able to assemble a
-world-class UAS.
+Equipment, materials, mentorship, and funding from our partners help NC State students build competitive autonomous aircraft. We work with sponsors to create practical opportunities for product testing, recruiting, technical collaboration, and recognition.

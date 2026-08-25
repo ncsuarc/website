@@ -1,0 +1,47 @@
+<script>
+  (function () {
+    "use strict";
+
+    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.collapse && window.jQuery.fn.dropdown) {
+      return;
+    }
+
+    document.querySelectorAll("[data-toggle='collapse']").forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        var selector = trigger.getAttribute("data-target");
+        var target = selector ? document.querySelector(selector) : null;
+        if (!target) return;
+
+        var willOpen = !target.classList.contains("show");
+        var parentSelector = target.getAttribute("data-parent");
+        if (willOpen && parentSelector) {
+          document.querySelectorAll(parentSelector + " .collapse.show").forEach(function (openPanel) {
+            openPanel.classList.remove("show");
+            var openTrigger = document.querySelector("[data-target='#" + openPanel.id + "']");
+            if (openTrigger) {
+              openTrigger.classList.add("collapsed");
+              openTrigger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        target.classList.toggle("show", willOpen);
+        trigger.classList.toggle("collapsed", !willOpen);
+        trigger.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      });
+    });
+
+    document.querySelectorAll("[data-toggle='dropdown']").forEach(function (trigger) {
+      trigger.addEventListener("click", function (event) {
+        event.preventDefault();
+        var menu = trigger.parentElement.querySelector(".dropdown-menu");
+        var willOpen = menu && !menu.classList.contains("show");
+        document.querySelectorAll(".dropdown-menu.show").forEach(function (openMenu) {
+          openMenu.classList.remove("show");
+        });
+        if (menu) menu.classList.toggle("show", willOpen);
+        trigger.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      });
+    });
+  })();
+</script>

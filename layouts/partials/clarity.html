@@ -1,9 +1,101 @@
-{{ if not hugo.IsServer }}
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "weylt1jd0h");
+<aside class="analytics-consent" data-analytics-consent hidden aria-labelledby="analytics-consent-title">
+  <div class="analytics-consent__copy">
+    <strong id="analytics-consent-title">Help us improve this site</strong>
+    <p>We use Microsoft Clarity analytics to understand how visitors use the ARC website. Analytics loads only if you accept.</p>
+  </div>
+  <div class="analytics-consent__actions">
+    <button type="button" class="btn btn-outline-secondary" data-analytics-decline>Decline</button>
+    <button type="button" class="btn btn-primary" data-analytics-accept>Accept analytics</button>
+  </div>
+</aside>
+
+<script>
+  (function () {
+    "use strict";
+
+    var storageKey = "arc-analytics-consent";
+    var projectId = "{{ .Site.Params.analytics.clarityProjectID }}";
+    var trackingEnabled = {{ if not hugo.IsServer }}true{{ else }}false{{ end }};
+    var consent = document.querySelector("[data-analytics-consent]");
+    var accept = document.querySelector("[data-analytics-accept]");
+    var decline = document.querySelector("[data-analytics-decline]");
+    var settings = document.querySelector("[data-analytics-settings]");
+
+    function storedChoice() {
+      try {
+        return window.localStorage.getItem(storageKey);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function saveChoice(value) {
+      try {
+        window.localStorage.setItem(storageKey, value);
+      } catch (error) {
+        // The current-page preference still applies when storage is unavailable.
+      }
+    }
+
+    function showConsent(shouldFocus) {
+      consent.hidden = false;
+      if (shouldFocus) accept.focus();
+    }
+
+    function hideConsent() {
+      consent.hidden = true;
+    }
+
+    function loadClarity() {
+      if (!trackingEnabled || !projectId || document.querySelector("script[data-clarity-script]")) {
+        return;
+      }
+
+      window.clarity = window.clarity || function () {
+        (window.clarity.q = window.clarity.q || []).push(arguments);
+      };
+      window.clarity("consentv2", {
+        ad_Storage: "denied",
+        analytics_Storage: "granted"
+      });
+
+      var script = document.createElement("script");
+      script.async = true;
+      script.dataset.clarityScript = "true";
+      script.src = "https://www.clarity.ms/tag/" + projectId;
+      document.head.appendChild(script);
+    }
+
+    accept.addEventListener("click", function () {
+      saveChoice("accepted");
+      hideConsent();
+      loadClarity();
+    });
+
+    decline.addEventListener("click", function () {
+      var wasLoaded = Boolean(window.clarity);
+      saveChoice("declined");
+      if (window.clarity) {
+        window.clarity("consentv2", {
+          ad_Storage: "denied",
+          analytics_Storage: "denied"
+        });
+        window.clarity("consent", false);
+      }
+      hideConsent();
+      if (wasLoaded) {
+        window.location.reload();
+      }
+    });
+
+    settings.addEventListener("click", function () {
+      showConsent(true);
+    });
+
+    if (storedChoice() === "accepted") {
+      loadClarity();
+    } else if (storedChoice() !== "declined") {
+      showConsent(false);
+    }
+  })();
 </script>
-{{ end }}
