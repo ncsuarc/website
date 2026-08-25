@@ -40,7 +40,7 @@
         {{ end }}
         {{ end }}
       </ul>
-      <a class="btn btn-primary nav-join ml-lg-3" href="{{ if .IsHome }}#join{{ else }}{{ "/contact/#join" | relURL }}{{ end }}">Join ARC</a>
+      <a class="btn btn-primary nav-join ml-lg-3" href="{{ .Site.Params.join.getInvolvedURL }}" target="_blank" rel="noopener noreferrer">Join ARC</a>
     </div>
   </div>
 </nav>
