@@ -5,4 +5,4 @@ image: "fenrir/images/system_80.webp"
 
 # Our System
 
-We have a winning combination of custom mechanical, electrical, and software subsystems that allows us to consistently rank highly in the AUVSI SUAS competition from year to year. Each incredible in its own right, our subsystems are outlined below.
+Fenrir combined custom mechanical, electrical, and software subsystems that helped ARC rank highly in the AUVSI SUAS competition during its competition years. Each subsystem is outlined below.

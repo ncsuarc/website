@@ -44,6 +44,19 @@ params:
     getInvolvedURL: "https://getinvolved.ncsu.edu/organization/arc"
     interestFormURL: "https://go.ncsu.edu/jwpxnqn"
     slackURL: "https://join.slack.com/t/ncsuarc/shared_invite/zt-471os635j-S59JnfhbSRHtv~wzRPADbQ"
+  recurringMeetings:
+    - name: "General Body Meetings"
+      schedule: "Mondays at 6:00 PM"
+      location: "Room announced in Slack"
+    - name: "Airframe"
+      schedule: "Tuesdays and Wednesdays at 6:00 PM"
+      location: "Engineering Building III, Room 2003 (MAE Lab)"
+    - name: "Software"
+      schedule: "Time to be determined"
+      location: "Join the Software Slack channel for updates"
+    - name: "Electrical and Drop"
+      schedule: "Time to be determined"
+      location: "Join the Electrical and Drop Slack channel for updates"
   social:
     instagramURL: "https://www.instagram.com/aerialroboticsclub/"
   analytics:

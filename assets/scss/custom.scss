@@ -213,6 +213,50 @@ button:focus-visible,
   margin-bottom: 0;
 }
 
+.weekly-schedule {
+  background: #f5f6f7;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.schedule-heading-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.schedule-heading-row h2 {
+  letter-spacing: -0.025em;
+}
+
+.schedule-heading-row .btn {
+  flex: 0 0 auto;
+}
+
+.schedule-grid {
+  margin-top: 2.25rem;
+}
+
+.schedule-column:nth-child(n + 3) {
+  margin-top: 1.5rem;
+}
+
+.schedule-item {
+  height: 100%;
+  padding: 1.35rem 0;
+  border-top: 2px solid #d0d0d0;
+}
+
+.schedule-item h3 {
+  color: $primary;
+  font-size: 1.2rem;
+}
+
+.schedule-item__time {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
 .join-band {
   background: #f5f6f7;
   border-bottom: 1px solid #e3e3e3;
@@ -744,6 +788,24 @@ button:focus-visible,
 
   .calendar-frame {
     height: 30rem;
+  }
+
+  .schedule-heading-row {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .schedule-heading-row .btn {
+    align-self: flex-start;
+  }
+
+  .schedule-grid {
+    margin-top: 1.75rem;
+  }
+
+  .schedule-column + .schedule-column {
+    margin-top: 0.5rem;
   }
 
   .capability-column,

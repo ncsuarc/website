@@ -6,8 +6,8 @@
     <h2>Join ARC</h2>
     <p class="lead mb-4">Interested in building autonomous aircraft with us? Start with an interest meeting or join the club Slack.</p>
     <div class="join-actions justify-content-center">
-      <a class="btn btn-primary btn-lg" href="{{ .Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Interest Meeting Form</a>
-      <a class="btn btn-outline-secondary btn-lg" href="{{ .Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Join Our Slack</a>
+      <a class="btn btn-primary btn-lg" href="{{ .Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Complete the interest form</a>
+      <a class="btn btn-outline-secondary btn-lg" href="{{ .Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Join ARC Slack</a>
     </div>
   </div>
 </section>
@@ -37,21 +37,19 @@
         <aside class="meeting-summary">
           <h3>Weekly meetings</h3>
           <dl class="meeting-details">
+            {{ range .Site.Params.recurringMeetings }}
             <div>
-              <dt>When</dt>
-              <dd>{{ .Params.meeting_schedule }}</dd>
+              <dt>{{ .name }}</dt>
+              <dd>{{ .schedule }}<br><span class="text-muted">{{ .location }}</span></dd>
             </div>
-            <div>
-              <dt>Meeting room</dt>
-              <dd>{{ .Params.meeting_room }}</dd>
-            </div>
+            {{ end }}
             <div>
               <dt>ARC lab</dt>
               <dd>{{ .Params.lab_room }}</dd>
             </div>
           </dl>
           <p class="text-muted">Times and rooms can change. The live calendar is the source of truth for each meeting.</p>
-          <a class="btn btn-outline-primary" href="https://calendar.google.com/calendar/embed?wkst=1&amp;ctz=America%2FNew_York&amp;src=YWVyaWFscm9ib3RpY3NAbmNzdS5lZHU&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer">Open full calendar</a>
+          <a class="btn btn-outline-primary" href="https://calendar.google.com/calendar/embed?wkst=1&amp;ctz=America%2FNew_York&amp;src=YWVyaWFscm9ib3RpY3NAbmNzdS5lZHU&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer">View the full event calendar</a>
         </aside>
       </div>
     </div>
@@ -88,7 +86,7 @@
         </div>
 
         <div class="location-card__actions">
-          <a class="btn btn-primary" href="{{ .Params.directions_url }}" target="_blank" rel="noopener noreferrer">Get directions</a>
+          <a class="btn btn-primary" href="{{ .Params.directions_url }}" target="_blank" rel="noopener noreferrer">Open directions in Google Maps</a>
           <a class="btn btn-outline-secondary" href="mailto:aerialrobotics@ncsu.edu">Email ARC</a>
           <a class="btn btn-outline-secondary" href="{{ .Site.Params.social.instagramURL }}" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
         </div>

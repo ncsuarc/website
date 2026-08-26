@@ -6,8 +6,8 @@
         <h1>The <span class="font-weight-bold">{{ .Title }}</span> at NC State</h1>
         <div class="lead">{{ .Content }}</div>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="{{ .Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Interest Meeting Signup</a>
-          <a class="btn btn-outline-light btn-lg" href="{{ .Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Join Slack</a>
+          <a class="btn btn-primary btn-lg" href="{{ .Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Complete the interest form</a>
+          <a class="btn btn-outline-light btn-lg" href="{{ .Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Join ARC Slack</a>
         </div>
       </div>
       <div class="col-lg-5 mt-4 mt-lg-0 hero-videos">
@@ -44,6 +44,29 @@
   </div><!-- ./row -->
 </section>
 
+<section class="weekly-schedule" aria-labelledby="weekly-schedule-heading">
+  <div class="container site-section">
+    <div class="schedule-heading-row">
+      <div>
+        <h2 id="weekly-schedule-heading">Weekly schedule</h2>
+        <p class="text-muted mb-0">Recurring club and subteam meetings. Times may change, so check Slack for the latest updates.</p>
+      </div>
+      <a class="btn btn-outline-primary" href="{{ .Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Join Slack for schedule updates</a>
+    </div>
+    <div class="row schedule-grid">
+      {{ range .Site.Params.recurringMeetings }}
+      <div class="col-md-6 schedule-column">
+        <div class="schedule-item">
+          <h3>{{ .name }}</h3>
+          <p class="schedule-item__time">{{ .schedule }}</p>
+          <p class="text-muted mb-0">{{ .location }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
 <section class="join-band" id="join">
   <div class="container site-section">
   <div class="row align-items-stretch">
@@ -55,11 +78,11 @@
       </h5>
       {{ if eq .Title "How to Join" }}
       <div class="join-actions justify-content-center">
-        <a class="btn btn-primary" href="{{ $.Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Interest Form</a>
-        <a class="btn btn-outline-secondary" href="{{ $.Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Slack</a>
+        <a class="btn btn-primary" href="{{ $.Site.Params.join.interestFormURL }}" target="_blank" rel="noopener noreferrer">Complete the interest form</a>
+        <a class="btn btn-outline-secondary" href="{{ $.Site.Params.join.slackURL }}" target="_blank" rel="noopener noreferrer">Join ARC Slack</a>
       </div>
       {{ else }}
-      <a class="btn btn-primary" href="{{ .Params.link | relURL }}">About ARC</a>
+      <a class="btn btn-primary" href="{{ .Params.link | relURL }}">Meet the ARC team</a>
       {{ end }}
     </div><!-- ./col -->
     {{ end }}
