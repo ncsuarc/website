@@ -47,7 +47,7 @@ params:
   recurringMeetings:
     - name: "General Body Meetings"
       schedule: "Mondays at 6:00 PM"
-      location: "Room announced in Slack"
+      location: "Engineering Building III, Room 2207"
     - name: "Airframe"
       schedule: "Tuesdays and Wednesdays at 6:00 PM"
       location: "Engineering Building III, Room 2003 (MAE Lab)"
