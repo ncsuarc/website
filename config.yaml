@@ -46,17 +46,17 @@ params:
     slackURL: "https://join.slack.com/t/ncsuarc/shared_invite/zt-471os635j-S59JnfhbSRHtv~wzRPADbQ"
   recurringMeetings:
     - name: "General Body Meetings"
-      schedule: "Mondays at 6:00 PM"
+      schedule: "Mondays from 6:00–7:00 PM"
       location: "Engineering Building III, Room 2207"
     - name: "Airframe"
-      schedule: "Tuesdays and Wednesdays at 6:00 PM"
-      location: "Engineering Building III, Room 2003 (MAE Lab)"
+      schedule: "Tuesdays and Wednesdays from 6:00–8:00 PM"
+      location: "Engineering Building III, Room 2003"
     - name: "Software"
       schedule: "Fridays at 6:00 PM"
-      location: "Location to be determined"
+      location: "Koch Hall, Room 1220"
     - name: "Electrical and Drop"
-      schedule: "Time to be determined"
-      location: "Join the Electrical and Drop Slack channel for updates"
+      schedule: "Thursdays at 5:00 PM"
+      location: "Engineering Building III, Room 2003"
   social:
     instagramURL: "https://www.instagram.com/aerialroboticsclub/"
   analytics:
